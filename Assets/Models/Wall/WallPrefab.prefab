@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1089952261768699377}
   - component: {fileID: 1089952261768699376}
   - component: {fileID: 1089952261768699379}
+  - component: {fileID: 7186193478960338395}
   m_Layer: 0
   m_Name: WallPrefab
   m_TagString: Untagged
@@ -80,3 +81,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7186193478960338395
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089952261768699378}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 3, z: 0.5}
+  m_Center: {x: 0, y: 1.5, z: 0}
