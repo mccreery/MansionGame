@@ -23,6 +23,8 @@ public class Hotbar : MonoBehaviour
 
     public void Add(GameObject item)
     {
+        item.transform.localPosition = Vector3.zero;
+        item.transform.localRotation = Quaternion.identity;
         items.Add(item);
         UpdateSlots();
     }
@@ -30,10 +32,14 @@ public class Hotbar : MonoBehaviour
     public GameObject Remove(int slot)
     {
         GameObject item = slots[slot];
+        item.layer = restoreLayer;
         items.RemoveAt(slot);
         UpdateSlots();
         return item;
     }
+
+    public int cameraLayer;
+    public int restoreLayer;
 
     private void UpdateSlots()
     {
@@ -56,15 +62,21 @@ public class Hotbar : MonoBehaviour
             Transform item = slots[i].transform.Find("Item");
             if (item != null)
             {
-                items[i].transform.parent = item;
+                items[i].layer = cameraLayer;
+                items[i].transform.SetParent(item, false);
             }
         }
 
+        // Destroy old slots
+        foreach (Transform child in GetChildren(transform))
+        {
+            Destroy(child.gameObject);
+        }
+
         // Replace old slots with new slots
-        DestroyChildren(transform);
         for (int i = 0; i < slots.Length; i++)
         {
-            slots[i].transform.parent = transform;
+            slots[i].transform.SetParent(transform, false);
         }
     }
 
@@ -97,7 +109,7 @@ public class Hotbar : MonoBehaviour
 
         if (Time.time - lastScrollTime > scrollCooldown)
         {
-            int scroll = Math.Sign(Input.mouseScrollDelta.y);
+            int scroll = -Math.Sign(Input.mouseScrollDelta.y);
             if (scroll != 0)
             {
                 lastScrollTime -= Time.time;
@@ -111,11 +123,11 @@ public class Hotbar : MonoBehaviour
         return a - b * (int)Mathf.Floor((float)a / b);
     }
 
-    private static void DestroyChildren(Transform parent)
+    private static IEnumerable<Transform> GetChildren(Transform parent)
     {
-        while (parent.childCount > 0)
+        for (int i = 0; i < parent.childCount; i++)
         {
-            Destroy(parent.GetChild(0));
+            yield return parent.GetChild(i);
         }
     }
 }

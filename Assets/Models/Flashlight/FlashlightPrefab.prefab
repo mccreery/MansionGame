@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 3674528445893451358}
   - component: {fileID: 3674528445888459614}
   - component: {fileID: 5427653838605991656}
+  - component: {fileID: 5553719861380595176}
   m_Layer: 0
   m_Name: FlashlightPrefab
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,3 +118,15 @@ CapsuleCollider:
   m_Height: 0.23057188
   m_Direction: 1
   m_Center: {x: -0.000000020489097, y: 0, z: 0}
+--- !u!114 &5553719861380595176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3674528445895704734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb34a9ffc6054e44af8f512c70699cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
