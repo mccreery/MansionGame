@@ -12,17 +12,20 @@ public class Door : MonoBehaviour
     private float animationStartTime = Mathf.NegativeInfinity;
     public float animationTime = 1.0f;
 
+    private float AnimationProgress => Mathf.Clamp(Time.time - animationStartTime, 0, animationTime);
+
     private void OnMouseDown() => Toggle();
 
     public void Toggle()
     {
         open = !open;
-        animationStartTime = Time.time;
+        // Mirror the current animation position by restarting the animation in the past
+        animationStartTime = Time.time - (animationTime - AnimationProgress);
     }
 
     private void Update()
     {
-        float t = Mathf.Clamp01((Time.time - animationStartTime) / animationTime);
+        float t = Mathf.Clamp01(AnimationProgress / animationTime);
         t = Mathf.SmoothStep(0.0f, 1.0f, t);
 
         if (!open)
