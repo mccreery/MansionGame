@@ -8,7 +8,8 @@ public class Door : MonoBehaviour
 
     private bool open;
 
-    private float animationStartTime;
+    // Prevent animation running at start of game
+    private float animationStartTime = Mathf.NegativeInfinity;
     public float animationTime = 1.0f;
 
     private void OnMouseDown() => Toggle();
