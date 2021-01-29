@@ -3239,26 +3239,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1485461582158281068, guid: da3b5a9ec695a8049ba289fdcc537b5a,
-        type: 3}
-      propertyPath: m_Cameras.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1485461582158281068, guid: da3b5a9ec695a8049ba289fdcc537b5a,
-        type: 3}
-      propertyPath: m_Cameras.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2040791662442455837, guid: da3b5a9ec695a8049ba289fdcc537b5a,
-        type: 3}
-      propertyPath: startDistance
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2624253011169953759, guid: da3b5a9ec695a8049ba289fdcc537b5a,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7326713959407265936, guid: da3b5a9ec695a8049ba289fdcc537b5a,
         type: 3}
       propertyPath: m_Name
