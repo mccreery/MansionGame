@@ -33,6 +33,6 @@ public class Door : MonoBehaviour
             t = 1.0f - t;
         }
 
-        hinge.transform.rotation = Quaternion.Slerp(Quaternion.identity, Quaternion.Euler(0, openRotation, 0), t);
+        hinge.transform.localRotation = Quaternion.Slerp(Quaternion.identity, Quaternion.Euler(0, openRotation, 0), t);
     }
 }
