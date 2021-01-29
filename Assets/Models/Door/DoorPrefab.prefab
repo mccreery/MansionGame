@@ -106,23 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1650be27d19c794daa6b19ef56d6a01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onMouseDown:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2614278951126366972}
-        m_MethodName: Toggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onMouseUp:
-    m_PersistentCalls:
-      m_Calls: []
+  target: {fileID: 5550763814915045266}
 --- !u!1 &4048587653188563745
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,6 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5851b39ca9ed8c046b5f7b8f594e39ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: 0fcf64da88984f24d8fae60b7630d179, type: 2}
   hinge: {fileID: 4048587653188563745}
   openRotation: -100
   animationTime: 1

@@ -4,6 +4,8 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Image))]
 public class Reticle : MonoBehaviour
 {
+    public PlayerData playerData;
+
     [Range(0, 1)]
     public float maxRadius;
 
@@ -25,10 +27,15 @@ public class Reticle : MonoBehaviour
     {
         Ray ray = Camera.main.ViewportPointToRay(new Vector2(0.5f, 0.5f));
 
-        interested = Physics.Raycast(ray, out RaycastHit hitInfo)
+        interested = Physics.Raycast(ray, out RaycastHit hitInfo, playerData.reach)
             && hitInfo.transform.gameObject.CompareTag("Interactable");
 
         radius = Mathf.SmoothDamp(radius, interested ? maxRadius : 0, ref radiusVelocity, smoothTime);
         image.material.SetFloat("Radius", radius);
+
+        if (Input.GetButtonDown("Fire1") && interested)
+        {
+            hitInfo.transform.GetComponent<IInteractable>().Interact();
+        }
     }
 }

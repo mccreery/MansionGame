@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 
-public class Door : MonoBehaviour
+public class Door : MonoBehaviour, IInteractable
 {
+    public PlayerData playerData;
     public GameObject hinge;
 
     public float openRotation = 100.0f;
@@ -14,7 +15,7 @@ public class Door : MonoBehaviour
 
     private float AnimationProgress => Mathf.Clamp(Time.time - animationStartTime, 0, animationTime);
 
-    private void OnMouseDown() => Toggle();
+    public void Interact() => Toggle();
 
     public void Toggle()
     {

@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af9af26fe2319e046b597036ed7e6bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interested: 0
+  playerData: {fileID: 11400000, guid: 0fcf64da88984f24d8fae60b7630d179, type: 2}
   maxRadius: 0.8
   smoothTime: 0.2
 --- !u!1 &2065745938338065732
