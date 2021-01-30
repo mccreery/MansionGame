@@ -19,78 +19,71 @@ public class Hotbar : MonoBehaviour
     }
 
     private GameObject[] slots;
-    private List<GameObject> items;
+    private List<ItemPickup> items;
 
-    public void Add(GameObject item, ItemPickup pickup)
+    public void Add(ItemPickup pickup)
     {
-        Add(item, pickup.position, pickup.rotation, pickup.scale);
-    }
-
-    public void Add(GameObject item, Vector3 position, Quaternion rotation, Vector3 scale)
-    {
-        item.transform.localPosition = position;
-        item.transform.localRotation = rotation;
-        item.transform.localScale = scale;
-
-        items.Add(item);
+        items.Add(pickup);
+        pickup.gameObject.SetActive(false);
         UpdateSlots();
     }
 
-    public GameObject Remove(int slot)
+    public ItemPickup Remove(int slot)
     {
-        GameObject item = slots[slot];
-        item.layer = restoreLayer;
+        ItemPickup pickup = items[slot];
         items.RemoveAt(slot);
+        pickup.gameObject.SetActive(true);
         UpdateSlots();
-        return item;
+        return pickup;
     }
 
     public int cameraLayer;
-    public int restoreLayer;
 
     private void UpdateSlots()
     {
-        // Create slots
-        for (int i = 0; i < numberOfSlots; i++)
-        {
-            slots[i] = Instantiate(slotPrefab);
-
-            Transform highlight = slots[i].transform.Find("Highlight");
-            if (highlight != null)
-            {
-                highlight.gameObject.SetActive(i == selectedSlot);
-            }
-        }
-
-        // Fill slots with current items
-        // Do this before destroying the old slots to prevent destroying items
-        for (int i = 0; i < items.Count; i++)
-        {
-            Transform item = slots[i].transform.Find("Item");
-            if (item != null)
-            {
-                items[i].layer = cameraLayer;
-                items[i].transform.SetParent(item, false);
-            }
-        }
-
         // Destroy old slots
         foreach (Transform child in GetChildren(transform))
         {
             Destroy(child.gameObject);
         }
 
-        // Replace old slots with new slots
-        for (int i = 0; i < slots.Length; i++)
+        // Create new slots
+        for (int i = 0; i < numberOfSlots; i++)
         {
-            slots[i].transform.SetParent(transform, false);
+            // Create a new slot
+            slots[i] = Instantiate(slotPrefab, transform);
+
+            // Select the slot if current
+            Transform highlight = slots[i].transform.Find("Highlight");
+            if (highlight != null)
+            {
+                highlight.gameObject.SetActive(i == selectedSlot);
+            }
+
+            if (i < items.Count)
+            {
+                // Instantiate a copy of the pickup
+                Transform parentTransform = slots[i].transform.Find("Item");
+                if (parentTransform != null)
+                {
+                    ItemPickup pickup = items[i];
+                    GameObject itemCopy = Instantiate(pickup.gameObject, parentTransform);
+                    itemCopy.SetActive(true);
+
+                    // Ensure visible to camera
+                    itemCopy.layer = cameraLayer;
+                    itemCopy.transform.localPosition = pickup.position;
+                    itemCopy.transform.localRotation = pickup.rotation;
+                    itemCopy.transform.localScale = pickup.scale;
+                }
+            }
         }
     }
 
     private void Start()
     {
         slots = new GameObject[numberOfSlots];
-        items = new List<GameObject>();
+        items = new List<ItemPickup>();
 
         SelectedSlot = 0;
         UpdateSlots();
