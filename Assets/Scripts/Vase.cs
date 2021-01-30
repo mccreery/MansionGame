@@ -21,4 +21,12 @@ public class Vase : MonoBehaviour, IInteractable
         brokenVersion.SetActive(true);
         gameObject.SetActive(false);
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            Shatter();
+        }
+    }
 }
