@@ -34,7 +34,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats:
-    - Radius: 6e-45
+    - Radius: 1.5496702e-22
     - Thickness: 0.15
     - Vector1_487965A4: 0.1
     - Vector1_E737B85: 0
