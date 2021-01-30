@@ -22,6 +22,21 @@ public class Hotbar : MonoBehaviour
     private GameObject[] slots;
     private List<ItemPickup> items;
 
+    public ItemPickup this[int slotIndex]
+    {
+        get
+        {
+            if (slotIndex >= 0 && slotIndex < items.Count)
+            {
+                return items[slotIndex];
+            }
+            else
+            {
+                return null;
+            }
+        }
+    }
+
     public void Add(ItemPickup pickup)
     {
         items.Add(pickup);
