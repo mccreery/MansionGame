@@ -13,7 +13,7 @@ public class Hotbar : MonoBehaviour
         get => selectedSlot;
         set
         {
-            selectedSlot = value;
+            selectedSlot = Mathf.Clamp(value, 0, numberOfSlots);
             UpdateSlots();
         }
     }
@@ -115,6 +115,11 @@ public class Hotbar : MonoBehaviour
                 lastScrollTime -= Time.time;
                 SelectedSlot = FloorMod(SelectedSlot + scroll, numberOfSlots);
             }
+        }
+
+        if (Input.GetButtonDown("Return Item") && SelectedSlot < items.Count)
+        {
+            Remove(SelectedSlot);
         }
     }
 
