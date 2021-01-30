@@ -4,8 +4,8 @@ public class ProxyInteractable : MonoBehaviour, IInteractable
 {
     public GameObject target;
 
-    public void Interact()
+    public bool Interact(ItemPickup heldItem)
     {
-        target.GetComponent<IInteractable>().Interact();
+        return target.GetComponent<IInteractable>().Interact(heldItem);
     }
 }

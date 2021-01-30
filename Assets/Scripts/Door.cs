@@ -15,7 +15,23 @@ public class Door : MonoBehaviour, IInteractable
 
     private float AnimationProgress => Mathf.Clamp(Time.time - animationStartTime, 0, animationTime);
 
-    public void Interact() => Toggle();
+    public ItemPickup key;
+
+    public bool Interact(ItemPickup heldItem)
+    {
+        if (key == null)
+        {
+            Toggle();
+        }
+        else if (heldItem == key)
+        {
+            // Unlock door
+            Toggle();
+            key = null;
+            return true;
+        }
+        return false;
+    }
 
     public void Toggle()
     {

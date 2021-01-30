@@ -23,6 +23,8 @@ public class Reticle : MonoBehaviour
         image = GetComponent<Image>();
     }
 
+    public Hotbar hotbar;
+
     private void Update()
     {
         Ray ray = Camera.main.ViewportPointToRay(new Vector2(0.5f, 0.5f));
@@ -35,7 +37,12 @@ public class Reticle : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1") && interested)
         {
-            hitInfo.transform.GetComponent<IInteractable>().Interact();
+            // Perform interaction
+            if (hitInfo.transform.GetComponent<IInteractable>().Interact(hotbar[hotbar.SelectedSlot]))
+            {
+                // Consume item
+                hotbar.Remove(hotbar.SelectedSlot, returnItem: false);
+            }
         }
     }
 }
