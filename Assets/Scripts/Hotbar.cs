@@ -44,11 +44,11 @@ public class Hotbar : MonoBehaviour
         UpdateSlots();
     }
 
-    public ItemPickup Remove(int slot)
+    public ItemPickup Remove(int slot, bool returnItem = true)
     {
         ItemPickup pickup = items[slot];
         items.RemoveAt(slot);
-        pickup.gameObject.SetActive(true);
+        pickup.gameObject.SetActive(returnItem);
         UpdateSlots();
         return pickup;
     }

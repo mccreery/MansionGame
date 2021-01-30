@@ -41,7 +41,7 @@ public class Reticle : MonoBehaviour
             if (hitInfo.transform.GetComponent<IInteractable>().Interact(hotbar[hotbar.SelectedSlot]))
             {
                 // Consume item
-                hotbar.Remove(hotbar.SelectedSlot);
+                hotbar.Remove(hotbar.SelectedSlot, returnItem: false);
             }
         }
     }
