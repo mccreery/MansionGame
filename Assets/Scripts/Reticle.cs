@@ -24,6 +24,7 @@ public class Reticle : MonoBehaviour
     }
 
     public Hotbar hotbar;
+    public Inspector inspector;
 
     private void Update()
     {
@@ -35,13 +36,23 @@ public class Reticle : MonoBehaviour
         radius = Mathf.SmoothDamp(radius, interested ? maxRadius : 0, ref radiusVelocity, smoothTime);
         image.material.SetFloat("Radius", radius);
 
-        if (Input.GetButtonDown("Fire1") && interested)
+        if (Input.GetButtonDown("Fire1"))
         {
-            // Perform interaction
-            if (hitInfo.transform.GetComponent<IInteractable>().Interact(hotbar[hotbar.SelectedSlot]))
+            ItemPickup heldItem = hotbar[hotbar.SelectedSlot];
+
+            if (interested)
             {
-                // Consume item
-                hotbar.Remove(hotbar.SelectedSlot, returnItem: false);
+                // Perform interaction
+                if (hitInfo.transform.GetComponent<IInteractable>().Interact(heldItem))
+                {
+                    // Consume item
+                    hotbar.Remove(hotbar.SelectedSlot, returnItem: false);
+                }
+            }
+            else if (heldItem != null)
+            {
+                inspector.Item = heldItem;
+                inspector.Open();
             }
         }
     }
