@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Hotbar : MonoBehaviour
 {
@@ -52,6 +53,13 @@ public class Hotbar : MonoBehaviour
         {
             // Create a new slot
             slots[i] = Instantiate(slotPrefab, transform);
+
+            // Set the slot number
+            Transform number = slots[i].transform.Find("Number");
+            if (number != null)
+            {
+                number.gameObject.GetComponent<Text>().text = (i + 1).ToString();
+            }
 
             // Select the slot if current
             Transform highlight = slots[i].transform.Find("Highlight");
