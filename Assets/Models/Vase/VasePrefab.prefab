@@ -1939,7 +1939,6 @@ GameObject:
   - component: {fileID: 3394664341780818853}
   - component: {fileID: 1776930930171716360}
   - component: {fileID: 9129515282333207415}
-  - component: {fileID: 3595430655906131574}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -2008,20 +2007,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &3595430655906131574
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3585106211670850765}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -9101003468893156507, guid: 43c90aec0fd7ced4eb621518c8f2077e, type: 3}
 --- !u!1 &3601269399933791071
 GameObject:
   m_ObjectHideFlags: 0
@@ -2509,7 +2494,6 @@ GameObject:
   - component: {fileID: 1034550126905121912}
   - component: {fileID: 6317537880769510706}
   - component: {fileID: 4897496982282113940}
-  - component: {fileID: 1862287645687229467}
   m_Layer: 0
   m_Name: Lid
   m_TagString: Untagged
@@ -2578,20 +2562,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1862287645687229467
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4135392416417602070}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8958578687491789592, guid: 43c90aec0fd7ced4eb621518c8f2077e, type: 3}
 --- !u!1 &4202604967542216044
 GameObject:
   m_ObjectHideFlags: 0
@@ -4462,9 +4432,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6779231941563373773}
+  - component: {fileID: 1737517679659751772}
+  - component: {fileID: 8232831751618277916}
   m_Layer: 0
   m_Name: Fixed
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4485,6 +4457,34 @@ Transform:
   m_Father: {fileID: 4484331504672948532}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1737517679659751772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6710447284184714052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a39172a5ec851d749996ed523ed7898a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cantUseText: It's too heavy to lift, and the lid is stuck.
+  brokenVersion: {fileID: 5691131952715446691}
+--- !u!136 &8232831751618277916
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6710447284184714052}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 7.47
+  m_Height: 26.86
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: -11.6}
 --- !u!1 &6950102555614635530
 GameObject:
   m_ObjectHideFlags: 0

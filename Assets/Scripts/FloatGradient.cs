@@ -14,6 +14,19 @@ public struct FloatGradient
     public float startValue;
     public Stop[] stops;
 
+    public float TotalTime
+    {
+        get
+        {
+            float totalTime = 0.0f;
+            foreach (Stop stop in stops)
+            {
+                totalTime += stop.time;
+            }
+            return totalTime;
+        }
+    }
+
     public float this[float time]
     {
         get

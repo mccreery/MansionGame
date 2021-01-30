@@ -26,9 +26,17 @@ public class Message : MonoBehaviour
         text.color = newColor;
     }
 
-    public void ShowMessage(string message)
+    public bool ShowMessage(string message)
     {
-        text.text = message;
-        startTime = Time.time;
+        if (Time.time < startTime || Time.time > startTime + opacity.TotalTime)
+        {
+            text.text = message;
+            startTime = Time.time;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
