@@ -21,10 +21,17 @@ public class Hotbar : MonoBehaviour
     private GameObject[] slots;
     private List<GameObject> items;
 
-    public void Add(GameObject item)
+    public void Add(GameObject item, ItemPickup pickup)
     {
-        item.transform.localPosition = Vector3.zero;
-        item.transform.localRotation = Quaternion.identity;
+        Add(item, pickup.position, pickup.rotation, pickup.scale);
+    }
+
+    public void Add(GameObject item, Vector3 position, Quaternion rotation, Vector3 scale)
+    {
+        item.transform.localPosition = position;
+        item.transform.localRotation = rotation;
+        item.transform.localScale = scale;
+
         items.Add(item);
         UpdateSlots();
     }
