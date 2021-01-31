@@ -6,6 +6,7 @@ public class RecordPlayerInteraction : MonoBehaviour, IInteractable
 
     public Message message;
     public GameObject recordInWorld;
+    public GameObject cabinetGlass;
 
     public void Start()
     {
@@ -17,6 +18,7 @@ public class RecordPlayerInteraction : MonoBehaviour, IInteractable
         if (heldItem == correctRecord)
         {
             recordInWorld.SetActive(true);
+            cabinetGlass.SetActive(false);
             return true;
         }
         else if (heldItem != null)
