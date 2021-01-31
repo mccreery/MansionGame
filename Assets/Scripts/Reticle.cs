@@ -30,12 +30,17 @@ public class Reticle : MonoBehaviour
     public Hotbar hotbar;
     public Inspector inspector;
 
+    private RaycastHit raycastHit;
+    public RaycastHit Raycast => raycastHit;
+
+    public bool Hit { get; private set; }
+
     private void Update()
     {
         Ray ray = Camera.main.ViewportPointToRay(new Vector2(0.5f, 0.5f));
 
-        interested = Physics.Raycast(ray, out RaycastHit hitInfo, playerData.reach)
-            && hitInfo.transform.gameObject.CompareTag("Interactable");
+        Hit = Physics.Raycast(ray, out raycastHit, playerData.reach);
+        interested = Hit && raycastHit.transform.gameObject.CompareTag("Interactable");
 
         radius = Mathf.SmoothDamp(radius, interested ? maxRadius : 0, ref radiusVelocity, smoothTime);
         image.material.SetFloat(radiusProperty, radius);
@@ -47,7 +52,7 @@ public class Reticle : MonoBehaviour
             if (interested)
             {
                 // Perform interaction
-                if (hitInfo.transform.GetComponent<IInteractable>().Interact(heldItem))
+                if (raycastHit.transform.GetComponent<IInteractable>().Interact(heldItem))
                 {
                     // Consume item
                     hotbar.Remove(hotbar.SelectedSlot, returnItem: false);

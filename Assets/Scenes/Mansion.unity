@@ -311,6 +311,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6165827281357189458, guid: da3b5a9ec695a8049ba289fdcc537b5a,
+        type: 3}
+      propertyPath: reticle
+      value: 
+      objectReference: {fileID: 1392862759}
+    - target: {fileID: 6468338574455222637, guid: da3b5a9ec695a8049ba289fdcc537b5a,
+        type: 3}
+      propertyPath: reticle
+      value: 
+      objectReference: {fileID: 1392862759}
     - target: {fileID: 7326713959407265936, guid: da3b5a9ec695a8049ba289fdcc537b5a,
         type: 3}
       propertyPath: m_Name
@@ -578,6 +588,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b74d7278cae8a154d84ee14a4d472905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1392862759 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4784312867041607938, guid: 6c1794b3265b00644ac29c4b6b80c870,
+    type: 3}
+  m_PrefabInstance: {fileID: 8610758711524393554}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af9af26fe2319e046b597036ed7e6bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1759273120
