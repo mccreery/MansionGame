@@ -51,7 +51,7 @@ LightmapSettings:
     m_IndirectOutputScale: 1
     m_AlbedoBoost: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 1
+    m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 12
@@ -71,7 +71,7 @@ LightmapSettings:
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
-    m_MixedBakeMode: 2
+    m_MixedBakeMode: 1
     m_BakeBackend: 1
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
@@ -581,6 +581,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1303424734}
     m_Modifications:
+    - target: {fileID: 262485311971476217, guid: 26849654399de1442bc08a7594b16ca5,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 262485311971476217, guid: 26849654399de1442bc08a7594b16ca5,
+        type: 3}
+      propertyPath: m_Range
+      value: 8.57
+      objectReference: {fileID: 0}
     - target: {fileID: 387395124539081743, guid: 26849654399de1442bc08a7594b16ca5,
         type: 3}
       propertyPath: m_Name
@@ -646,6 +656,16 @@ PrefabInstance:
       propertyPath: hammer
       value: 
       objectReference: {fileID: 155207278}
+    - target: {fileID: 3256911251643629537, guid: 26849654399de1442bc08a7594b16ca5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3256911251643629537, guid: 26849654399de1442bc08a7594b16ca5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.262
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26849654399de1442bc08a7594b16ca5, type: 3}
 --- !u!1001 &2023113292231844403
