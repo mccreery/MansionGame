@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.052941177, g: 0.056862745, b: 0.064705886, a: 1}
+  m_AmbientSkyColor: {r: 0.4392157, g: 0.4392157, b: 0.5019608, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -595,31 +595,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
       value: 9.403955e-38
-      objectReference: {fileID: 0}
-    - target: {fileID: 262485311971476217, guid: 26849654399de1442bc08a7594b16ca5,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 262485311971476217, guid: 26849654399de1442bc08a7594b16ca5,
-        type: 3}
-      propertyPath: m_Range
-      value: 8.57
-      objectReference: {fileID: 0}
-    - target: {fileID: 262485311971476217, guid: 26849654399de1442bc08a7594b16ca5,
-        type: 3}
-      propertyPath: m_BoundingSphereOverride.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 262485311971476217, guid: 26849654399de1442bc08a7594b16ca5,
-        type: 3}
-      propertyPath: m_BoundingSphereOverride.y
-      value: 3.0571e-41
-      objectReference: {fileID: 0}
-    - target: {fileID: 262485311971476217, guid: 26849654399de1442bc08a7594b16ca5,
-        type: 3}
-      propertyPath: m_BoundingSphereOverride.w
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 387395124539081743, guid: 26849654399de1442bc08a7594b16ca5,
         type: 3}
