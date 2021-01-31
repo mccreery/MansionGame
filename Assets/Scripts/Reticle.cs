@@ -21,6 +21,8 @@ public class Reticle : MonoBehaviour
     private void Start()
     {
         image = GetComponent<Image>();
+        // Copy material so it doesn't update asset
+        image.material = new Material(image.material);
     }
 
     public Hotbar hotbar;
