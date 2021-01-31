@@ -12,6 +12,8 @@ public class Reticle : MonoBehaviour
     [Min(0)]
     public float smoothTime;
 
+    public string radiusProperty;
+
     private float radius;
     private float radiusVelocity;
 
@@ -36,7 +38,7 @@ public class Reticle : MonoBehaviour
             && hitInfo.transform.gameObject.CompareTag("Interactable");
 
         radius = Mathf.SmoothDamp(radius, interested ? maxRadius : 0, ref radiusVelocity, smoothTime);
-        image.material.SetFloat("Radius", radius);
+        image.material.SetFloat(radiusProperty, radius);
 
         if (Input.GetButtonDown("Fire1"))
         {
