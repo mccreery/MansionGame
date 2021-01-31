@@ -2,11 +2,19 @@
 
 public class Vase : MonoBehaviour, IInteractable
 {
+    public ItemPickup hammer;
     public string cantUseText;
 
     public bool Interact(ItemPickup heldItem)
     {
-        FindObjectOfType<Message>().ShowMessage(cantUseText);
+        if (heldItem == hammer)
+        {
+            Shatter();
+        }
+        else
+        {
+            FindObjectOfType<Message>().ShowMessage(cantUseText);
+        }
         return false;
     }
 
@@ -21,13 +29,5 @@ public class Vase : MonoBehaviour, IInteractable
     {
         brokenVersion.SetActive(true);
         gameObject.SetActive(false);
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            Shatter();
-        }
     }
 }
