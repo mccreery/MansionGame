@@ -6,7 +6,7 @@ public class FlashlightFade : MonoBehaviour
     public Reticle reticle;
     public Ranges.MapParameters mapDistanceToIntensity;
 
-    private Light light;
+    private new Light light;
 
     void Start()
     {
