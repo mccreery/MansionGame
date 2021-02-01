@@ -2,7 +2,6 @@
 
 public class Door : MonoBehaviour, IInteractable
 {
-    public PlayerData playerData;
     public GameObject hinge;
 
     public float openRotation = 100.0f;

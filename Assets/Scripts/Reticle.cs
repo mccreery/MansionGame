@@ -4,8 +4,6 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Image))]
 public class Reticle : MonoBehaviour
 {
-    public PlayerData playerData;
-
     [Range(0, 1)]
     public float maxRadius;
 
@@ -35,12 +33,14 @@ public class Reticle : MonoBehaviour
 
     public bool Hit { get; private set; }
 
+    public float reach = 3;
+
     private void Update()
     {
         Ray ray = Camera.main.ViewportPointToRay(new Vector2(0.5f, 0.5f));
 
         Hit = Physics.Raycast(ray, out raycastHit);
-        interested = Hit && raycastHit.distance < playerData.reach && raycastHit.transform.gameObject.CompareTag("Interactable");
+        interested = Hit && raycastHit.distance < reach && raycastHit.transform.gameObject.CompareTag("Interactable");
 
         radius = Mathf.SmoothDamp(radius, interested ? maxRadius : 0, ref radiusVelocity, smoothTime);
         image.material.SetFloat(radiusProperty, radius);
