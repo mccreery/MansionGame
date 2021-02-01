@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1912123809533863215}
   - component: {fileID: 5453202890154500485}
-  - component: {fileID: 2128988399295715687}
   m_Layer: 0
   m_Name: Spotlight
   m_TagString: Untagged
@@ -45,8 +44,8 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 15
-  m_Range: 30
+  m_Intensity: 5
+  m_Range: 15
   m_SpotAngle: 70
   m_InnerSpotAngle: 45
   m_CookieSize: 10
@@ -95,24 +94,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &2128988399295715687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3334949941781950020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4590b61f3cc5c64f95a3ea816377278, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  reticle: {fileID: 0}
-  mapDistanceToIntensity:
-    fromA: 0
-    fromB: 20
-    toA: 0
-    toB: 30
 --- !u!1 &5507584628066461277
 GameObject:
   m_ObjectHideFlags: 0
