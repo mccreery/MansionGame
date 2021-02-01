@@ -39,8 +39,8 @@ public class Reticle : MonoBehaviour
     {
         Ray ray = Camera.main.ViewportPointToRay(new Vector2(0.5f, 0.5f));
 
-        Hit = Physics.Raycast(ray, out raycastHit, playerData.reach);
-        interested = Hit && raycastHit.transform.gameObject.CompareTag("Interactable");
+        Hit = Physics.Raycast(ray, out raycastHit);
+        interested = Hit && raycastHit.distance < playerData.reach && raycastHit.transform.gameObject.CompareTag("Interactable");
 
         radius = Mathf.SmoothDamp(radius, interested ? maxRadius : 0, ref radiusVelocity, smoothTime);
         image.material.SetFloat(radiusProperty, radius);
