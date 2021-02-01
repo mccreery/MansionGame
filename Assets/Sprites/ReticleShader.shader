@@ -11,6 +11,7 @@ Shader "Unlit/ReticleShader"
     {
         Tags { "Queue" = "Overlay" "RenderType" = "Overlay" }
         Blend SrcAlpha OneMinusSrcAlpha
+        LOD 100
 
         Pass
         {
@@ -51,4 +52,5 @@ Shader "Unlit/ReticleShader"
             ENDCG
         }
     }
+    FallBack "UI/Default"
 }
