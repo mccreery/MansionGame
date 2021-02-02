@@ -1,0 +1,5 @@
+# Unity files
+*.meta binary
+*.unity binary
+*.asset binary
+*.prefab binary
