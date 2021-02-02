@@ -5218,6 +5218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a39172a5ec851d749996ed523ed7898a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hammer: {fileID: 0}
   cantUseText: It's too heavy to lift, and the lid is stuck.
   brokenVersion: {fileID: 5691131952715446691}
 --- !u!136 &8232831751618277916

@@ -4,13 +4,13 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Image))]
 public class Reticle : MonoBehaviour
 {
-    public PlayerData playerData;
-
     [Range(0, 1)]
     public float maxRadius;
 
     [Min(0)]
     public float smoothTime;
+
+    public string radiusProperty;
 
     private float radius;
     private float radiusVelocity;
@@ -28,15 +28,22 @@ public class Reticle : MonoBehaviour
     public Hotbar hotbar;
     public Inspector inspector;
 
+    private RaycastHit raycastHit;
+    public RaycastHit Raycast => raycastHit;
+
+    public bool Hit { get; private set; }
+
+    public float reach = 3;
+
     private void Update()
     {
         Ray ray = Camera.main.ViewportPointToRay(new Vector2(0.5f, 0.5f));
 
-        interested = Physics.Raycast(ray, out RaycastHit hitInfo, playerData.reach)
-            && hitInfo.transform.gameObject.CompareTag("Interactable");
+        Hit = Physics.Raycast(ray, out raycastHit);
+        interested = Hit && raycastHit.distance < reach && raycastHit.transform.gameObject.CompareTag("Interactable");
 
         radius = Mathf.SmoothDamp(radius, interested ? maxRadius : 0, ref radiusVelocity, smoothTime);
-        image.material.SetFloat("Radius", radius);
+        image.material.SetFloat(radiusProperty, radius);
 
         if (Input.GetButtonDown("Fire1"))
         {
@@ -45,7 +52,7 @@ public class Reticle : MonoBehaviour
             if (interested)
             {
                 // Perform interaction
-                if (hitInfo.transform.GetComponent<IInteractable>().Interact(heldItem))
+                if (raycastHit.transform.GetComponent<IInteractable>().Interact(heldItem))
                 {
                     // Consume item
                     hotbar.Remove(hotbar.SelectedSlot, returnItem: false);

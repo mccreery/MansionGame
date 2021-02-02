@@ -2,8 +2,7 @@
 
 public class Door : MonoBehaviour, IInteractable
 {
-    public PlayerData playerData;
-    public GameObject hinge;
+    public Transform hinge;
 
     public float openRotation = 100.0f;
 
@@ -50,6 +49,6 @@ public class Door : MonoBehaviour, IInteractable
             t = 1.0f - t;
         }
 
-        hinge.transform.localRotation = Quaternion.Slerp(Quaternion.identity, Quaternion.Euler(0, openRotation, 0), t);
+        hinge.localRotation = Quaternion.Slerp(Quaternion.identity, Quaternion.Euler(0, openRotation, 0), t);
     }
 }
