@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0, w: 1}
-  scale: {x: 2000, y: 2000, z: 2000}
+  scale: {x: 1000, y: 1000, z: 1000}
 --- !u!135 &6922882001366151926
 SphereCollider:
   m_ObjectHideFlags: 0
