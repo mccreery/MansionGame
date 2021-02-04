@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8799314979378500054}
   - component: {fileID: 6771589834444236060}
   - component: {fileID: 5214130747415036245}
-  - component: {fileID: 2701348300455844798}
+  - component: {fileID: 6922882001366151926}
   m_Layer: 0
   m_Name: Vinyl_disc
   m_TagString: Interactable
@@ -57,11 +57,10 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3a8d7dbb1ab7c504689dde5964f35f32, type: 2}
-  - {fileID: 2100000, guid: 3a8d7dbb1ab7c504689dde5964f35f32, type: 2}
   - {fileID: 2100000, guid: 3a8d7dbb1ab7c504689dde5964f35f32, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -83,6 +82,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &5214130747415036245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   position: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0, w: 1}
   scale: {x: 2000, y: 2000, z: 2000}
---- !u!135 &2701348300455844798
+--- !u!135 &6922882001366151926
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,5 +109,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.009680855
+  m_Radius: 0.024798777
   m_Center: {x: 0, y: 0, z: 0}
