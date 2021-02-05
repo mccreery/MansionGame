@@ -59,9 +59,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeb34a9ffc6054e44af8f512c70699cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: {x: 0, y: -5, z: 2}
+  position: {x: 0, y: -5, z: 0}
   rotation: {x: 0.37161887, y: -0.35633737, z: 0.08483052, w: -0.8530691}
   scale: {x: 17, y: 17, z: 17}
+  autoInspect: 0
+  overrideForInspector: 1
+  inspectorPosition: {x: 0, y: 0, z: 0}
+  inspectorRotation: {x: -0.5777605, y: -0.03178008, z: 0.031779565, w: 0.814968}
+  inspectorScale: {x: 17, y: 17, z: 17}
 --- !u!1001 &5292759199154526908
 PrefabInstance:
   m_ObjectHideFlags: 0

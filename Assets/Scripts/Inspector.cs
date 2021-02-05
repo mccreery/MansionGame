@@ -20,9 +20,19 @@ public class Inspector : MonoBehaviour
             viewedObject = Instantiate(item.gameObject, transform);
             viewedObject.SetActive(true);
             Hotbar.SetLayerRecursively(viewedObject, cameraLayer);
-            viewedObject.transform.localPosition = item.position;
-            viewedObject.transform.localRotation = item.rotation;
-            viewedObject.transform.localScale = item.scale;
+
+            if (item.overrideForInspector)
+            {
+                viewedObject.transform.localPosition = item.inspectorPosition;
+                viewedObject.transform.localRotation = item.inspectorRotation;
+                viewedObject.transform.localScale = item.inspectorScale;
+            }
+            else
+            {
+                viewedObject.transform.localPosition = item.position;
+                viewedObject.transform.localRotation = item.rotation;
+                viewedObject.transform.localScale = item.scale;
+            }
         }
     }
 

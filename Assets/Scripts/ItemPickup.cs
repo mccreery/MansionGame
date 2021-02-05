@@ -8,6 +8,11 @@ public class ItemPickup : MonoBehaviour, IInteractable
 
     public bool autoInspect = false;
 
+    public bool overrideForInspector;
+    public Vector3 inspectorPosition = Vector3.zero;
+    public Quaternion inspectorRotation = Quaternion.identity;
+    public Vector3 inspectorScale = Vector3.one;
+
     public bool Interact(ItemPickup heldItem)
     {
         Hotbar hotbar = FindObjectOfType<Hotbar>();
