@@ -94,7 +94,8 @@ public class Hotbar : MonoBehaviour
                     itemCopy.SetActive(true);
 
                     // Ensure visible to camera
-                    itemCopy.layer = cameraLayer;
+                    SetLayerRecursively(itemCopy, cameraLayer);
+
                     itemCopy.transform.localPosition = pickup.position;
                     itemCopy.transform.localRotation = pickup.rotation;
                     itemCopy.transform.localScale = pickup.scale;
@@ -156,6 +157,15 @@ public class Hotbar : MonoBehaviour
         for (int i = 0; i < parent.childCount; i++)
         {
             yield return parent.GetChild(i);
+        }
+    }
+
+    public static void SetLayerRecursively(GameObject gameObject, int layer)
+    {
+        gameObject.layer = layer;
+
+        foreach (Transform child in GetChildren(gameObject.transform)) {
+            SetLayerRecursively(child.gameObject, layer);
         }
     }
 }

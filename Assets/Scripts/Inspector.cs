@@ -19,7 +19,7 @@ public class Inspector : MonoBehaviour
             // Clone new item for viewing
             viewedObject = Instantiate(item.gameObject, transform);
             viewedObject.SetActive(true);
-            viewedObject.layer = cameraLayer;
+            Hotbar.SetLayerRecursively(viewedObject, cameraLayer);
             viewedObject.transform.localPosition = item.position;
             viewedObject.transform.localRotation = item.rotation;
             viewedObject.transform.localScale = item.scale;
