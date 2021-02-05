@@ -8,6 +8,8 @@ public class Hotbar : MonoBehaviour
     public int numberOfSlots = 5;
     public GameObject slotPrefab;
 
+    public Inspector inspector;
+
     private int selectedSlot;
     public int SelectedSlot
     {
@@ -37,11 +39,13 @@ public class Hotbar : MonoBehaviour
         }
     }
 
-    public void Add(ItemPickup pickup)
+    public int Add(ItemPickup pickup)
     {
         items.Add(pickup);
         pickup.gameObject.SetActive(false);
         UpdateSlots();
+
+        return items.Count - 1;
     }
 
     public ItemPickup Remove(int slot, bool returnItem = true)
@@ -102,6 +106,12 @@ public class Hotbar : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void Inspect()
+    {
+        inspector.Item = this[selectedSlot];
+        inspector.Open();
     }
 
     private void Start()

@@ -586,6 +586,7 @@ MonoBehaviour:
   numberOfSlots: 5
   slotPrefab: {fileID: 5841818873248836581, guid: 0d92f3d9186bfb740b9d11d8ba013c8a,
     type: 3}
+  inspector: {fileID: 3513557685278983010}
   cameraLayer: 8
   scrollCooldown: 0
 --- !u!1 &8864746476567452930
