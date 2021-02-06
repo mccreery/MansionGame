@@ -6,7 +6,8 @@ public class RecordPlayerInteraction : MonoBehaviour, IInteractable
 
     public Message message;
     public GameObject recordInWorld;
-    public GameObject cabinetGlass;
+
+    public Cabinet cabinet;
 
     public void Start()
     {
@@ -18,7 +19,7 @@ public class RecordPlayerInteraction : MonoBehaviour, IInteractable
         if (heldItem == correctRecord)
         {
             recordInWorld.SetActive(true);
-            cabinetGlass.SetActive(false);
+            cabinet.Smash();
             return true;
         }
         else if (heldItem != null)
