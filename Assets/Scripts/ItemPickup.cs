@@ -8,7 +8,15 @@ public class ItemPickup : MonoBehaviour, IInteractable
 
     public ItemPickup Interact(ItemPickup heldItem)
     {
-        FindObjectOfType<Hotbar>().Add(this);
-        return heldItem;
+        if (heldItem != null)
+        {
+            Hotbar hotbar = FindObjectOfType<Hotbar>();
+            hotbar.Add(this);
+            return heldItem;
+        }
+        else
+        {
+            return this;
+        }
     }
 }
