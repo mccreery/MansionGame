@@ -5,7 +5,7 @@ public class Vase : MonoBehaviour, IInteractable
     public ItemPickup hammer;
     public string cantUseText;
 
-    public bool Interact(ItemPickup heldItem)
+    public ItemPickup Interact(ItemPickup heldItem)
     {
         if (heldItem == hammer)
         {
@@ -15,7 +15,7 @@ public class Vase : MonoBehaviour, IInteractable
         {
             FindObjectOfType<Message>().ShowMessage(cantUseText);
         }
-        return false;
+        return heldItem;
     }
 
     public GameObject brokenVersion;

@@ -5,7 +5,35 @@ using UnityEngine.UI;
 
 public class Hotbar : MonoBehaviour
 {
-    public int numberOfSlots = 5;
+    private GameObject[] slots;
+    private ItemPickup[] items;
+
+    [SerializeField]
+    [Min(0)]
+    private int numberOfSlots = 5;
+
+    public int NumberOfSlots
+    {
+        get => numberOfSlots;
+        set
+        {
+            numberOfSlots = value;
+            Clear();
+        }
+    }
+
+    public int cameraLayer;
+
+    private void Awake() => Clear();
+
+    private void Clear()
+    {
+        slots = new GameObject[numberOfSlots];
+        items = new ItemPickup[numberOfSlots];
+        selectedSlot = 0;
+        UpdateSlots();
+    }
+
     public GameObject slotPrefab;
 
     private int selectedSlot;
@@ -14,46 +42,49 @@ public class Hotbar : MonoBehaviour
         get => selectedSlot;
         set
         {
-            selectedSlot = Mathf.Clamp(value, 0, numberOfSlots);
+            selectedSlot = value;
             UpdateSlots();
         }
     }
 
-    private GameObject[] slots;
-    private List<ItemPickup> items;
+    public ItemPickup this[int slot] => items[slot];
 
-    public ItemPickup this[int slotIndex]
+    public int Add(ItemPickup pickup)
     {
-        get
+        int nextSlot = Array.IndexOf(items, null);
+
+        if (nextSlot != -1)
         {
-            if (slotIndex >= 0 && slotIndex < items.Count)
-            {
-                return items[slotIndex];
-            }
-            else
-            {
-                return null;
-            }
+            Replace(nextSlot, pickup);
         }
-    }
-
-    public void Add(ItemPickup pickup)
-    {
-        items.Add(pickup);
-        pickup.gameObject.SetActive(false);
-        UpdateSlots();
+        return nextSlot;
     }
 
     public ItemPickup Remove(int slot, bool returnItem = true)
     {
-        ItemPickup pickup = items[slot];
-        items.RemoveAt(slot);
-        pickup.gameObject.SetActive(returnItem);
-        UpdateSlots();
-        return pickup;
+        return Replace(slot, null, returnItem);
     }
 
-    public int cameraLayer;
+    public ItemPickup Replace(int slot, ItemPickup newItem, bool returnItem = false)
+    {
+        ItemPickup oldItem = items[slot];
+
+        if (oldItem != newItem)
+        {
+            items[slot] = newItem;
+            UpdateSlots();
+        }
+
+        if (newItem != null)
+        {
+            newItem.gameObject.SetActive(false);
+        }
+        if (oldItem != null && returnItem)
+        {
+            oldItem.gameObject.SetActive(true);
+        }
+        return oldItem;
+    }
 
     private void UpdateSlots()
     {
@@ -83,7 +114,7 @@ public class Hotbar : MonoBehaviour
                 highlight.gameObject.SetActive(i == selectedSlot);
             }
 
-            if (i < items.Count)
+            if (items[i] != null)
             {
                 // Instantiate a copy of the pickup
                 Transform parentTransform = slots[i].transform.Find("Item");
@@ -101,15 +132,6 @@ public class Hotbar : MonoBehaviour
                 }
             }
         }
-    }
-
-    private void Start()
-    {
-        slots = new GameObject[numberOfSlots];
-        items = new List<ItemPickup>();
-
-        SelectedSlot = 0;
-        UpdateSlots();
     }
 
     private float lastScrollTime = Mathf.NegativeInfinity;
@@ -140,7 +162,7 @@ public class Hotbar : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonDown("Return Item") && SelectedSlot < items.Count)
+        if (Input.GetButtonDown("Return Item"))
         {
             Remove(SelectedSlot);
         }

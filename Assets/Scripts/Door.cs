@@ -16,7 +16,7 @@ public class Door : MonoBehaviour, IInteractable
 
     public ItemPickup key;
 
-    public bool Interact(ItemPickup heldItem)
+    public ItemPickup Interact(ItemPickup heldItem)
     {
         if (key == null)
         {
@@ -27,9 +27,9 @@ public class Door : MonoBehaviour, IInteractable
             // Unlock door
             Toggle();
             key = null;
-            return true;
+            return null;
         }
-        return false;
+        return heldItem;
     }
 
     public void Toggle()
