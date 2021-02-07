@@ -6,9 +6,9 @@ public class ItemPickup : MonoBehaviour, IInteractable
     public Quaternion rotation = Quaternion.identity;
     public Vector3 scale = Vector3.one;
 
-    public bool Interact(ItemPickup heldItem)
+    public ItemPickup Interact(ItemPickup heldItem)
     {
         FindObjectOfType<Hotbar>().Add(this);
-        return false;
+        return heldItem;
     }
 }

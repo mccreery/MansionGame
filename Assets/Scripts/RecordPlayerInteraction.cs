@@ -13,23 +13,23 @@ public class RecordPlayerInteraction : MonoBehaviour, IInteractable
         recordInWorld.SetActive(false);
     }
 
-    public bool Interact(ItemPickup heldItem)
+    public ItemPickup Interact(ItemPickup heldItem)
     {
         if (heldItem == correctRecord)
         {
             recordInWorld.SetActive(true);
             cabinetGlass.SetActive(false);
-            return true;
+            return null;
         }
         else if (heldItem != null)
         {
             message.ShowMessage("That doesn't seem right.");
-            return false;
+            return heldItem;
         }
         else
         {
             message.ShowMessage("Looks like a record could go here.");
-            return false;
+            return heldItem;
         }
     }
 }

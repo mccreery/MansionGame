@@ -53,6 +53,26 @@ public class Hotbar : MonoBehaviour
         return pickup;
     }
 
+    public ItemPickup Replace(int slot, ItemPickup newItem, bool returnItem = false)
+    {
+        ItemPickup oldItem = items[slot];
+
+        if (newItem == null)
+        {
+            return Remove(slot, returnItem);
+        }
+        else if (oldItem != newItem)
+        {
+            items[slot] = newItem;
+
+            newItem.gameObject.SetActive(false);
+            oldItem.gameObject.SetActive(returnItem);
+
+            UpdateSlots();
+        }
+        return oldItem;
+    }
+
     public int cameraLayer;
 
     private void UpdateSlots()
