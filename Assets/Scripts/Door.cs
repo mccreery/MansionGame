@@ -25,7 +25,7 @@ public class Door : MonoBehaviour, IInteractable
         audioSource = GetComponent<AudioSource>();
     }
 
-    public ItemPickup Interact(ItemPickup heldItem)
+    public void Interact(Hotbar hotbar)
     {
         if (key == null)
         {
@@ -35,20 +35,21 @@ public class Door : MonoBehaviour, IInteractable
                 audioSource.PlayOneShot(openClip);
             }
         }
-        else if (heldItem == key)
+        else if (hotbar.SelectedItem == key)
         {
             audioSource.PlayOneShot(unlockClip);
 
             // Unlock door
             Toggle();
             key = null;
-            return null;
+
+            // Consume key
+            hotbar.Remove(hotbar.SelectedSlot, returnItem: false);
         }
         else
         {
             audioSource.PlayOneShot(lockedClip);
         }
-        return heldItem;
     }
 
     public void Toggle()

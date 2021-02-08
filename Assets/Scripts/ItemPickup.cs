@@ -13,30 +13,14 @@ public class ItemPickup : MonoBehaviour, IInteractable
     public Quaternion inspectorRotation = Quaternion.identity;
     public Vector3 inspectorScale = Vector3.one;
 
-    public ItemPickup Interact(ItemPickup heldItem)
+    public void Interact(Hotbar hotbar)
     {
-        Hotbar hotbar = FindObjectOfType<Hotbar>();
         int slot = hotbar.Add(this);
 
         if (autoInspect)
         {
             hotbar.SelectedSlot = slot;
             hotbar.Inspect();
-        }
-
-        // Don't overwrite held item if not this
-        if (heldItem != null)
-        {
-            return heldItem;
-        }
-        // Don't overwrite added item with null
-        else if (slot == hotbar.SelectedSlot)
-        {
-            return this;
-        }
-        else
-        {
-            return null;
         }
     }
 }

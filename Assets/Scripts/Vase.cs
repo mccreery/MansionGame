@@ -5,9 +5,9 @@ public class Vase : MonoBehaviour, IInteractable
     public ItemPickup hammer;
     public string cantUseText;
 
-    public ItemPickup Interact(ItemPickup heldItem)
+    public void Interact(Hotbar hotbar)
     {
-        if (heldItem == hammer)
+        if (hotbar.SelectedItem == hammer)
         {
             Shatter();
         }
@@ -15,7 +15,6 @@ public class Vase : MonoBehaviour, IInteractable
         {
             FindObjectOfType<Message>().ShowMessage(cantUseText);
         }
-        return heldItem;
     }
 
     public GameObject brokenVersion;

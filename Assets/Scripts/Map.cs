@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Map : MonoBehaviour
 {
-    private PinPoint[] pinnedPoints = new PinPoint[4];
+    private readonly PinPoint[] pinnedPoints = new PinPoint[4];
     private int pinCount = 0;
 
     public bool AllPinsPlaced => pinCount == pinnedPoints.Length;

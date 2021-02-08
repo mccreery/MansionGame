@@ -19,28 +19,20 @@ public class PinPoint : MonoBehaviour, IInteractable
         Pinned = false;
     }
 
-    public ItemPickup Interact(ItemPickup heldItem)
+    public void Interact(Hotbar hotbar)
     {
         if (Pinned)
         {
             // Removing last pin gives back pin item
             if (map.AllPinsPlaced)
             {
-                // if the slot is null we cannot return null because it will override the new item
-                if (heldItem == null)
-                {
-                    heldItem = pinItem;
-                }
-                else
-                {
-                    FindObjectOfType<Hotbar>().Add(pinItem);
-                }
+                hotbar.Add(pinItem);
             }
 
             Pinned = false;
             map.Unpin(this);
         }
-        else if (heldItem == pinItem)
+        else if (hotbar.SelectedItem == pinItem)
         {
             Pinned = true;
             map.Pin(this);
@@ -48,13 +40,12 @@ public class PinPoint : MonoBehaviour, IInteractable
             // Adding last pin takes pin item away
             if (map.AllPinsPlaced)
             {
-                return null;
+                hotbar.Remove(hotbar.SelectedSlot, false);
             }
         }
         else
         {
             FindObjectOfType<Message>().ShowMessage(message);
         }
-        return heldItem;
     }
 }

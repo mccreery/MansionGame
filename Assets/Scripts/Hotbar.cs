@@ -51,23 +51,25 @@ public class Hotbar : MonoBehaviour
 
     public ItemPickup this[int slot] => items[slot];
 
+    public ItemPickup SelectedItem => items[selectedSlot];
+
     public int Add(ItemPickup pickup)
     {
         int nextSlot = Array.IndexOf(items, null);
 
         if (nextSlot != -1)
         {
-            Replace(nextSlot, pickup);
+            Replace(nextSlot, pickup, false);
         }
         return nextSlot;
     }
 
-    public ItemPickup Remove(int slot, bool returnItem = true)
+    public ItemPickup Remove(int slot, bool returnItem)
     {
         return Replace(slot, null, returnItem);
     }
 
-    public ItemPickup Replace(int slot, ItemPickup newItem, bool returnItem = false)
+    public ItemPickup Replace(int slot, ItemPickup newItem, bool returnItem)
     {
         ItemPickup oldItem = items[slot];
 
@@ -173,7 +175,7 @@ public class Hotbar : MonoBehaviour
 
         if (Input.GetButtonDown("Return Item"))
         {
-            Remove(SelectedSlot);
+            Remove(SelectedSlot, true);
         }
     }
 

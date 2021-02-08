@@ -14,23 +14,21 @@ public class RecordPlayerInteraction : MonoBehaviour, IInteractable
         recordInWorld.SetActive(false);
     }
 
-    public ItemPickup Interact(ItemPickup heldItem)
+    public void Interact(Hotbar hotbar)
     {
-        if (heldItem == correctRecord)
+        if (hotbar.SelectedItem == correctRecord)
         {
             recordInWorld.SetActive(true);
             cabinet.Smash();
-            return null;
+            hotbar.Remove(hotbar.SelectedSlot, false);
         }
-        else if (heldItem != null)
+        else if (hotbar.SelectedItem != null)
         {
             message.ShowMessage("That doesn't seem right.");
-            return heldItem;
         }
         else
         {
             message.ShowMessage("Looks like a record could go here.");
-            return heldItem;
         }
     }
 }

@@ -10,14 +10,13 @@ public class Globe : MonoBehaviour, IInteractable
         animator = GetComponent<Animator>();
     }
 
-    public ItemPickup Interact(ItemPickup heldItem)
+    public void Interact(Hotbar hotbar)
     {
         if (allowInteraction)
         {
             allowInteraction = false;
             animator.Play("Spin", -1, 0);
         }
-        return heldItem;
     }
 
     private bool allowInteraction = true;

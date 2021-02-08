@@ -5,7 +5,7 @@ public class MessageInteraction : MonoBehaviour, IInteractable
     public string message;
     public AudioClip sound;
 
-    public ItemPickup Interact(ItemPickup helditem)
+    public void Interact(Hotbar hotbar)
     {
         FindObjectOfType<Message>().ShowMessage(message);
 
@@ -17,7 +17,5 @@ public class MessageInteraction : MonoBehaviour, IInteractable
                 source.PlayOneShot(sound);
             }
         }
-
-        return helditem;
     }
 }

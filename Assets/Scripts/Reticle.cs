@@ -51,7 +51,7 @@ public class Reticle : MonoBehaviour
             if (interested)
             {
                 IInteractable interactable = raycastHit.transform.GetComponent<IInteractable>();
-                hotbar.Replace(hotbar.SelectedSlot, interactable.Interact(heldItem));
+                interactable.Interact(hotbar);
             }
             else if (heldItem != null)
             {
