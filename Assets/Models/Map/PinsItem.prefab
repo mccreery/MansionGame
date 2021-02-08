@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5008800418393293093}
   - component: {fileID: 7292634654703033163}
   - component: {fileID: 8571705495729435742}
-  - component: {fileID: 4261925060784888359}
+  - component: {fileID: 1783996573346326623}
   m_Layer: 0
   m_Name: PinsItem
   m_TagString: Interactable
@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitWidth: 0.1
---- !u!114 &4261925060784888359
+--- !u!114 &1783996573346326623
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -201,13 +201,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1030587523085618939}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b7b294250ce4ef449e3eda4b2a09abe, type: 3}
+  m_Script: {fileID: 11500000, guid: aeb34a9ffc6054e44af8f512c70699cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 0, y: -3, z: 0}
-  rotation: {x: 0.40821806, y: 0.2345697, z: -0.109381706, w: 0.875426}
+  rotation: {x: 0.25881904, y: 0, z: 0, w: 0.9659258}
   scale: {x: 10, y: 10, z: 10}
-  hasTwo: 1
 --- !u!1001 &954636908269592870
 PrefabInstance:
   m_ObjectHideFlags: 0
