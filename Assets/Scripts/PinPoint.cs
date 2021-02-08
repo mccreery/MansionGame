@@ -2,22 +2,21 @@
 
 public class PinPoint : MonoBehaviour, IInteractable
 {
-    public string doublePinTag;
-    public string singlePinTag;
-
     public GameObject singlePinItemPrefab;
 
     public ItemPickup Interact(ItemPickup heldItem)
     {
-        if (heldItem.CompareTag(doublePinTag))
+        if (heldItem is PinItem pinItem)
         {
-            GameObject singlePin = Instantiate(singlePinItemPrefab);
-            singlePin.tag = singlePinTag;
-            return singlePin.GetComponent<ItemPickup>();
-        }
-        else if (heldItem.CompareTag(singlePinTag))
-        {
-            return null;
+            if (pinItem.hasTwo)
+            {
+                GameObject singlePin = Instantiate(singlePinItemPrefab);
+                return singlePin.GetComponent<ItemPickup>();
+            }
+            else
+            {
+                return null;
+            }
         }
         else
         {
