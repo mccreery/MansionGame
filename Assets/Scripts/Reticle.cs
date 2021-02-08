@@ -26,7 +26,6 @@ public class Reticle : MonoBehaviour
     }
 
     public Hotbar hotbar;
-    public Inspector inspector;
 
     private RaycastHit raycastHit;
     public RaycastHit Raycast => raycastHit;
@@ -56,8 +55,7 @@ public class Reticle : MonoBehaviour
             }
             else if (heldItem != null)
             {
-                inspector.Item = heldItem;
-                inspector.Open();
+                hotbar.Inspect();
             }
         }
     }
