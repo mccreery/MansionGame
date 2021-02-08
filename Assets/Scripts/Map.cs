@@ -1,34 +1,34 @@
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(LineRenderer))]
 public class Map : MonoBehaviour
 {
-    public ItemPickup[] pinPool;
+    private PinPoint[] pinnedPoints = new PinPoint[4];
+    private int pinCount = 0;
 
-    private void Start()
+    public bool AllPinsPlaced => pinCount == pinnedPoints.Length;
+
+    // Pins can be pinned multiple times with this method
+    // The pinpoints track this themselves
+    public void Pin(PinPoint point)
     {
-        // Hide all pins
-        foreach (ItemPickup pin in pinPool)
+        int i = Array.IndexOf(pinnedPoints, null);
+        if (i != -1)
         {
-            pin.gameObject.SetActive(false);
+            pinnedPoints[i] = point;
+            ++pinCount;
         }
     }
 
-    private List<PinPoint> pinnedPoints = new List<PinPoint>();
-
-    public bool AllPinned => pinnedPoints.Count == pinPool.Length;
-
-    public bool AddPin(PinPoint point)
+    // Only unpins if pinned in the first place
+    public void Unpin(PinPoint point)
     {
-        if (!pinnedPoints.Contains(point))
+        int i = Array.IndexOf(pinnedPoints, point);
+        if (i != -1)
         {
-            pinnedPoints.Add(point);
-            return true;
-        }
-        else
-        {
-            return false;
+            pinnedPoints[i] = null;
+            --pinCount;
         }
     }
 }

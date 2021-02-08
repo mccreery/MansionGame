@@ -179,7 +179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32d8b54d32f2fe647b34f436beca38b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pinPool: []
 --- !u!120 &7572621912864805123
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -388,6 +387,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7614424755151288837, guid: e936c7cb5bf782f43b68dae4620f928c,
         type: 3}
+      propertyPath: map
+      value: 
+      objectReference: {fileID: 2445164061492295904}
+    - target: {fileID: 7614424755151288837, guid: e936c7cb5bf782f43b68dae4620f928c,
+        type: 3}
+      propertyPath: message
+      value: Italy.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7614424755151288837, guid: e936c7cb5bf782f43b68dae4620f928c,
+        type: 3}
       propertyPath: pinItem
       value: 
       objectReference: {fileID: 3914344737777486669}
@@ -465,6 +474,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Brazil
+      objectReference: {fileID: 0}
+    - target: {fileID: 7614424755151288837, guid: e936c7cb5bf782f43b68dae4620f928c,
+        type: 3}
+      propertyPath: map
+      value: 
+      objectReference: {fileID: 2445164061492295904}
+    - target: {fileID: 7614424755151288837, guid: e936c7cb5bf782f43b68dae4620f928c,
+        type: 3}
+      propertyPath: message
+      value: Brazil.
       objectReference: {fileID: 0}
     - target: {fileID: 7614424755151288837, guid: e936c7cb5bf782f43b68dae4620f928c,
         type: 3}
@@ -650,6 +669,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7614424755151288837, guid: e936c7cb5bf782f43b68dae4620f928c,
         type: 3}
+      propertyPath: map
+      value: 
+      objectReference: {fileID: 2445164061492295904}
+    - target: {fileID: 7614424755151288837, guid: e936c7cb5bf782f43b68dae4620f928c,
+        type: 3}
+      propertyPath: message
+      value: Australia.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7614424755151288837, guid: e936c7cb5bf782f43b68dae4620f928c,
+        type: 3}
       propertyPath: pinItem
       value: 
       objectReference: {fileID: 3914344737777486669}
@@ -727,6 +756,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: China
+      objectReference: {fileID: 0}
+    - target: {fileID: 7614424755151288837, guid: e936c7cb5bf782f43b68dae4620f928c,
+        type: 3}
+      propertyPath: map
+      value: 
+      objectReference: {fileID: 2445164061492295904}
+    - target: {fileID: 7614424755151288837, guid: e936c7cb5bf782f43b68dae4620f928c,
+        type: 3}
+      propertyPath: message
+      value: China.
       objectReference: {fileID: 0}
     - target: {fileID: 7614424755151288837, guid: e936c7cb5bf782f43b68dae4620f928c,
         type: 3}
@@ -810,6 +849,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7614424755151288837, guid: e936c7cb5bf782f43b68dae4620f928c,
         type: 3}
+      propertyPath: map
+      value: 
+      objectReference: {fileID: 2445164061492295904}
+    - target: {fileID: 7614424755151288837, guid: e936c7cb5bf782f43b68dae4620f928c,
+        type: 3}
+      propertyPath: message
+      value: South Africa.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7614424755151288837, guid: e936c7cb5bf782f43b68dae4620f928c,
+        type: 3}
       propertyPath: pinItem
       value: 
       objectReference: {fileID: 3914344737777486669}
@@ -887,6 +936,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: America
+      objectReference: {fileID: 0}
+    - target: {fileID: 7614424755151288837, guid: e936c7cb5bf782f43b68dae4620f928c,
+        type: 3}
+      propertyPath: map
+      value: 
+      objectReference: {fileID: 2445164061492295904}
+    - target: {fileID: 7614424755151288837, guid: e936c7cb5bf782f43b68dae4620f928c,
+        type: 3}
+      propertyPath: message
+      value: America.
       objectReference: {fileID: 0}
     - target: {fileID: 7614424755151288837, guid: e936c7cb5bf782f43b68dae4620f928c,
         type: 3}
