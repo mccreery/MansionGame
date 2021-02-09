@@ -44,7 +44,7 @@ public class Reticle : MonoBehaviour
         IInteractable pointOfInterest;
         int inventoryMask = 1 << inspector.cameraLayer;
 
-        if (inspector.Open)
+        if (inspector.IsOpen)
         {
             transform.position = Input.mousePosition;
 
@@ -88,7 +88,7 @@ public class Reticle : MonoBehaviour
             {
                 pointOfInterest.Interact(hotbar);
             }
-            else if (!inspector.Open && heldItem != null)
+            else if (!inspector.IsOpen && heldItem != null)
             {
                 hotbar.Inspect();
             }
@@ -99,7 +99,7 @@ public class Reticle : MonoBehaviour
     {
         if (hits.Length == 0)
         {
-            return new Interactable(hotbar => inspector.Open = false);
+            return new Interactable(hotbar => inspector.Close());
         }
 
         foreach (RaycastHit hit in hits)

@@ -2,12 +2,26 @@
 
 public class ItemPickup : MonoBehaviour, IInteractable
 {
-    public TransformData inventoryTransformData;
+    [SerializeField]
+    private TransformData inventoryTransformData;
 
-    public bool overrideForInspector;
-    public TransformData inspectorTransformData;
+    [SerializeField]
+    private bool overrideForInspector;
+
+    [SerializeField]
+    private TransformData inspectorTransformData;
+
+    public TransformData InventoryTransformData => inventoryTransformData;
+    public TransformData InspectorTransformData => overrideForInspector ? inspectorTransformData : inventoryTransformData;
 
     public bool autoInspect = false;
+
+    public TransformData WorldTransformData { get; private set; }
+
+    private void Start()
+    {
+        WorldTransformData = new TransformData(transform);
+    }
 
     public void Interact(Hotbar hotbar)
     {

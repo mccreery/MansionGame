@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -94,55 +93,33 @@ public class Hotbar : MonoBehaviour
         if (oldItem != newItem)
         {
             items[slot] = newItem;
-            UpdateSlots();
-        }
 
-        if (newItem != null)
-        {
-            newItem.gameObject.SetActive(false);
-        }
-        if (oldItem != null && returnItem)
-        {
-            oldItem.gameObject.SetActive(true);
+            if (newItem != null)
+            {
+                newItem.transform.SetParent(slots[slot].transform, false);
+                newItem.InventoryTransformData.CopyTo(newItem.transform, false);
+                SetLayerRecursively(newItem.gameObject, cameraLayer);
+            }
+
+            if (oldItem != null)
+            {
+                if (returnItem)
+                {
+                    oldItem.WorldTransformData.CopyTo(oldItem.transform, true);
+                    SetLayerRecursively(oldItem.gameObject, 0);
+                }
+                else
+                {
+                    Destroy(oldItem.gameObject);
+                }
+            }
         }
         return oldItem;
     }
 
-    private void UpdateSlots()
-    {
-        for (int i = 0; i < slots.Length; i++)
-        {
-            // Instantiate a copy of the pickup
-            Transform parentTransform = slots[i].transform.Find("Item");
-
-            if (parentTransform != null)
-            {
-                // Destroy previous copy
-                foreach (Transform childTransform in parentTransform)
-                {
-                    Destroy(childTransform.gameObject);
-                }
-
-                if (items[i] != null)
-                {
-                    // Create new copy
-                    ItemPickup pickup = items[i];
-                    GameObject itemCopy = Instantiate(pickup.gameObject, parentTransform);
-                    itemCopy.SetActive(true);
-
-                    // Ensure visible to camera
-                    SetLayerRecursively(itemCopy, cameraLayer);
-
-                    pickup.inventoryTransformData.CopyTo(itemCopy.transform, false);
-                }
-            }
-        }
-    }
-
     public void Inspect()
     {
-        inspector.Item = this[selectedSlot];
-        inspector.Open = true;
+        inspector.Inspect(SelectedItem);
     }
 
     private float lastScrollTime = Mathf.NegativeInfinity;
