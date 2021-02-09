@@ -74,7 +74,7 @@ public class Reticle : MonoBehaviour
             {
                 pointOfInterest.Interact(hotbar);
             }
-            else if (heldItem != null)
+            else if (!inspector.Open && heldItem != null)
             {
                 hotbar.Inspect();
             }
@@ -83,6 +83,11 @@ public class Reticle : MonoBehaviour
 
     private IInteractable GetInspectorInteraction(RaycastHit[] hits)
     {
+        if (hits.Length == 0)
+        {
+            return new Interactable(hotbar => inspector.Open = false);
+        }
+
         foreach (RaycastHit hit in hits)
         {
             if (hit.transform.CompareTag(InteractableTag))

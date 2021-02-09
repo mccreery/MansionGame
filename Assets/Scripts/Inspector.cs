@@ -58,11 +58,7 @@ public class Inspector : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            Open = false;
-        }
-        else if (Input.GetButton("Fire2"))
+        if (Input.GetButton("Fire2"))
         {
             if (!Input.GetButtonDown("Fire2"))
             {
