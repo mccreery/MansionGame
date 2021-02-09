@@ -131,9 +131,7 @@ public class Hotbar : MonoBehaviour
                     // Ensure visible to camera
                     SetLayerRecursively(itemCopy, cameraLayer);
 
-                    itemCopy.transform.localPosition = pickup.position;
-                    itemCopy.transform.localRotation = pickup.rotation;
-                    itemCopy.transform.localScale = pickup.scale;
+                    pickup.inventoryTransformData.CopyTo(itemCopy.transform, false);
                 }
             }
         }

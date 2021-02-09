@@ -23,15 +23,11 @@ public class Inspector : MonoBehaviour
 
             if (item.overrideForInspector)
             {
-                viewedObject.transform.localPosition = item.inspectorPosition;
-                viewedObject.transform.localRotation = item.inspectorRotation;
-                viewedObject.transform.localScale = item.inspectorScale;
+                item.inspectorTransformData.CopyTo(viewedObject.transform, false);
             }
             else
             {
-                viewedObject.transform.localPosition = item.position;
-                viewedObject.transform.localRotation = item.rotation;
-                viewedObject.transform.localScale = item.scale;
+                item.inventoryTransformData.CopyTo(viewedObject.transform, false);
             }
         }
     }

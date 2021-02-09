@@ -59,9 +59,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeb34a9ffc6054e44af8f512c70699cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventoryTransformData:
+    parent: {fileID: 0}
+    localPosition: {x: 0, y: 0, z: 0}
+    localRotation: {x: 0.65328145, y: 0.27059796, z: 0.27059796, w: 0.65328145}
+    localScale: {x: 100, y: 100, z: 100}
+  overrideForInspector: 0
+  inspectorTransformData:
+    parent: {fileID: 0}
+    localPosition: {x: 0, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: 0, w: 0}
+    localScale: {x: 0, y: 0, z: 0}
+  autoInspect: 0
   position: {x: 0, y: 0, z: 0}
   rotation: {x: 0.65328145, y: 0.270598, z: 0.270598, w: 0.65328145}
   scale: {x: 100, y: 100, z: 100}
+  inspectorPosition: {x: 0, y: 0, z: 0}
+  inspectorRotation: {x: 0, y: 0, z: 0, w: 1}
+  inspectorScale: {x: 1, y: 1, z: 1}
 --- !u!1 &2014976138058390112
 GameObject:
   m_ObjectHideFlags: 0

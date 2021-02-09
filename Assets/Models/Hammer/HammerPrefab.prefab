@@ -26,9 +26,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeb34a9ffc6054e44af8f512c70699cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventoryTransformData:
+    parent: {fileID: 0}
+    localPosition: {x: -1.3, y: -4.7, z: 1.3}
+    localRotation: {x: -0.8446969, y: 0.42300117, z: -0.1142984, w: 0.30739737}
+    localScale: {x: 215, y: 215, z: 215}
+  overrideForInspector: 0
+  inspectorTransformData:
+    parent: {fileID: 0}
+    localPosition: {x: 0, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: 0, w: 0}
+    localScale: {x: 0, y: 0, z: 0}
+  autoInspect: 0
   position: {x: -1.3, y: -4.7, z: 1.3}
   rotation: {x: 0.84469694, y: -0.423001, z: 0.114298336, w: -0.30739754}
   scale: {x: 215, y: 215, z: 215}
+  inspectorPosition: {x: 0, y: 0, z: 0}
+  inspectorRotation: {x: 0, y: 0, z: 0, w: 1}
+  inspectorScale: {x: 1, y: 1, z: 1}
 --- !u!1001 &4361274862158879695
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36,6 +51,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 8d62e3d412b4600409a2edd0084a91bb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8d62e3d412b4600409a2edd0084a91bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -53,6 +73,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8d62e3d412b4600409a2edd0084a91bb,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8d62e3d412b4600409a2edd0084a91bb,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -64,16 +89,6 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 8d62e3d412b4600409a2edd0084a91bb,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 8d62e3d412b4600409a2edd0084a91bb,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 8d62e3d412b4600409a2edd0084a91bb,
-        type: 3}
-      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8d62e3d412b4600409a2edd0084a91bb,

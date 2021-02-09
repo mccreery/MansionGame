@@ -204,9 +204,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeb34a9ffc6054e44af8f512c70699cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventoryTransformData:
+    parent: {fileID: 0}
+    localPosition: {x: 0, y: -3, z: 0}
+    localRotation: {x: 0.25881904, y: 0, z: 0, w: 0.9659258}
+    localScale: {x: 10, y: 10, z: 10}
+  overrideForInspector: 0
+  inspectorTransformData:
+    parent: {fileID: 0}
+    localPosition: {x: 0, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: 0, w: 0}
+    localScale: {x: 0, y: 0, z: 0}
+  autoInspect: 0
   position: {x: 0, y: -3, z: 0}
   rotation: {x: 0.25881904, y: 0, z: 0, w: 0.9659258}
   scale: {x: 10, y: 10, z: 10}
+  inspectorPosition: {x: 0, y: 0, z: 0}
+  inspectorRotation: {x: 0, y: 0, z: 0, w: 1}
+  inspectorScale: {x: 1, y: 1, z: 1}
 --- !u!1001 &954636908269592870
 PrefabInstance:
   m_ObjectHideFlags: 0

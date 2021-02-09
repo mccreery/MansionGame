@@ -21,9 +21,12 @@ public class TransformData
     {
     }
 
-    public void CopyTo(Transform transform)
+    public void CopyTo(Transform transform, bool copyParent)
     {
-        transform.SetParent(parent, false);
+        if (copyParent)
+        {
+            transform.SetParent(parent, false);
+        }
         transform.localPosition = localPosition;
         transform.localRotation = localRotation;
         transform.localScale = localScale;
