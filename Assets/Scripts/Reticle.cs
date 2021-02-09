@@ -16,7 +16,6 @@ public class Reticle : MonoBehaviour
     private float radiusVelocity;
 
     private Image image;
-    private bool interested;
 
     private void Start()
     {
@@ -26,37 +25,77 @@ public class Reticle : MonoBehaviour
     }
 
     public Hotbar hotbar;
-
-    private RaycastHit raycastHit;
-    public RaycastHit Raycast => raycastHit;
+    public Inspector inspector;
 
     public bool Hit { get; private set; }
 
+    private RaycastHit raycastHit;
+    public RaycastHit RaycastHit => raycastHit;
+
     public float reach = 3;
+
+    private const string InteractableTag = "Interactable";
 
     private void Update()
     {
-        Ray ray = Camera.main.ViewportPointToRay(new Vector2(0.5f, 0.5f));
+        IInteractable pointOfInterest;
+        int inventoryMask = 1 << inspector.cameraLayer;
 
-        Hit = Physics.Raycast(ray, out raycastHit);
-        interested = Hit && raycastHit.distance < reach && raycastHit.transform.gameObject.CompareTag("Interactable");
+        if (inspector.Open)
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit[] hits = Physics.RaycastAll(ray, float.PositiveInfinity, inventoryMask);
 
-        radius = Mathf.SmoothDamp(radius, interested ? maxRadius : 0, ref radiusVelocity, smoothTime);
+            pointOfInterest = GetInspectorInteraction(hits);
+        }
+        else
+        {
+            Ray ray = Camera.main.ViewportPointToRay(new Vector2(0.5f, 0.5f));
+            Hit = Physics.Raycast(ray, out raycastHit, float.PositiveInfinity, ~inventoryMask);
+
+            if (Hit && raycastHit.distance < reach && raycastHit.transform.CompareTag(InteractableTag))
+            {
+                pointOfInterest = raycastHit.transform.GetComponent<IInteractable>();
+            }
+            else
+            {
+                pointOfInterest = null;
+            }
+        }
+
+        radius = Mathf.SmoothDamp(radius, pointOfInterest != null ? maxRadius : 0, ref radiusVelocity, smoothTime);
         image.material.SetFloat(radiusProperty, radius);
 
         if (Input.GetButtonDown("Fire1"))
         {
             ItemPickup heldItem = hotbar[hotbar.SelectedSlot];
 
-            if (interested)
+            if (pointOfInterest != null)
             {
-                IInteractable interactable = raycastHit.transform.GetComponent<IInteractable>();
-                interactable.Interact(hotbar);
+                pointOfInterest.Interact(hotbar);
             }
             else if (heldItem != null)
             {
                 hotbar.Inspect();
             }
         }
+    }
+
+    private IInteractable GetInspectorInteraction(RaycastHit[] hits)
+    {
+        foreach (RaycastHit hit in hits)
+        {
+            if (hit.transform.CompareTag(InteractableTag))
+            {
+                IInteractable interactable = hit.transform.GetComponent<IInteractable>();
+
+                // Ignore world pickups
+                if (!(interactable is ItemPickup))
+                {
+                    return interactable;
+                }
+            }
+        }
+        return null;
     }
 }
