@@ -14,7 +14,7 @@ public class PointAtReticle : MonoBehaviour
         Quaternion targetRotation;
         if (reticle.Hit)
         {
-            targetRotation = Quaternion.LookRotation(reticle.Raycast.point - transform.position);
+            targetRotation = Quaternion.LookRotation(reticle.RaycastHit.point - transform.position);
 
             float angleFromForward = Quaternion.Angle(targetRotation, transform.parent.rotation);
             if (angleFromForward > maxAngleFromForward)

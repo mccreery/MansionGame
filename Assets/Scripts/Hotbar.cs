@@ -1,42 +1,46 @@
 ﻿using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Hotbar : MonoBehaviour
 {
+    [Min(0)]
+    public int numberOfSlots = 5;
+
+    public int cameraLayer;
+    public GameObject slotPrefab;
+    public Inspector inspector;
+
+    [Min(0)]
+    public float scrollCooldown;
+
     private GameObject[] slots;
     private ItemPickup[] items;
 
-    [SerializeField]
-    [Min(0)]
-    private int numberOfSlots = 5;
-
-    public int NumberOfSlots
-    {
-        get => numberOfSlots;
-        set
-        {
-            numberOfSlots = value;
-            Clear();
-        }
-    }
-
-    public int cameraLayer;
-
-    private void Awake() => Clear();
-
-    private void Clear()
+    private void Start()
     {
         slots = new GameObject[numberOfSlots];
         items = new ItemPickup[numberOfSlots];
         selectedSlot = 0;
-        UpdateSlots();
+
+        CreateSlots();
+        UpdateHighlights();
     }
 
-    public GameObject slotPrefab;
+    private void CreateSlots()
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            slots[i] = Instantiate(slotPrefab, transform);
 
-    public Inspector inspector;
+            // Display slot number
+            Text text = slots[i].GetComponentInChildren<Text>();
+            if (text != null)
+            {
+                text.text = (i + 1).ToString();
+            }
+        }
+    }
 
     private int selectedSlot;
     public int SelectedSlot
@@ -45,7 +49,20 @@ public class Hotbar : MonoBehaviour
         set
         {
             selectedSlot = value;
-            UpdateSlots();
+            UpdateHighlights();
+        }
+    }
+
+    private void UpdateHighlights()
+    {
+        // Show highlight rect around selected slot only
+        for (int i = 0; i < slots.Length; i++)
+        {
+            Transform highlight = slots[i].transform.Find("Highlight");
+            if (highlight != null)
+            {
+                highlight.gameObject.SetActive(i == selectedSlot);
+            }
         }
     }
 
@@ -76,79 +93,36 @@ public class Hotbar : MonoBehaviour
         if (oldItem != newItem)
         {
             items[slot] = newItem;
-            UpdateSlots();
-        }
 
-        if (newItem != null)
-        {
-            newItem.gameObject.SetActive(false);
-        }
-        if (oldItem != null && returnItem)
-        {
-            oldItem.gameObject.SetActive(true);
+            if (newItem != null)
+            {
+                newItem.transform.SetParent(slots[slot].transform, false);
+                newItem.InventoryTransformData.CopyTo(newItem.transform, false);
+                SetLayerRecursively(newItem.gameObject, cameraLayer);
+            }
+
+            if (oldItem != null)
+            {
+                if (returnItem)
+                {
+                    oldItem.WorldTransformData.CopyTo(oldItem.transform, true);
+                    SetLayerRecursively(oldItem.gameObject, 0);
+                }
+                else
+                {
+                    Destroy(oldItem.gameObject);
+                }
+            }
         }
         return oldItem;
     }
 
-    private void UpdateSlots()
-    {
-        // Destroy old slots
-        foreach (Transform child in GetChildren(transform))
-        {
-            Destroy(child.gameObject);
-        }
-
-        // Create new slots
-        for (int i = 0; i < numberOfSlots; i++)
-        {
-            // Create a new slot
-            slots[i] = Instantiate(slotPrefab, transform);
-
-            // Set the slot number
-            Transform number = slots[i].transform.Find("Number");
-            if (number != null)
-            {
-                number.gameObject.GetComponent<Text>().text = (i + 1).ToString();
-            }
-
-            // Select the slot if current
-            Transform highlight = slots[i].transform.Find("Highlight");
-            if (highlight != null)
-            {
-                highlight.gameObject.SetActive(i == selectedSlot);
-            }
-
-            if (items[i] != null)
-            {
-                // Instantiate a copy of the pickup
-                Transform parentTransform = slots[i].transform.Find("Item");
-                if (parentTransform != null)
-                {
-                    ItemPickup pickup = items[i];
-                    GameObject itemCopy = Instantiate(pickup.gameObject, parentTransform);
-                    itemCopy.SetActive(true);
-
-                    // Ensure visible to camera
-                    SetLayerRecursively(itemCopy, cameraLayer);
-
-                    itemCopy.transform.localPosition = pickup.position;
-                    itemCopy.transform.localRotation = pickup.rotation;
-                    itemCopy.transform.localScale = pickup.scale;
-                }
-            }
-        }
-    }
-
     public void Inspect()
     {
-        inspector.Item = this[selectedSlot];
-        inspector.Open();
+        inspector.Inspect(SelectedItem);
     }
 
     private float lastScrollTime = Mathf.NegativeInfinity;
-
-    [Min(0)]
-    public float scrollCooldown;
 
     private void Update()
     {
@@ -184,19 +158,11 @@ public class Hotbar : MonoBehaviour
         return a - b * (int)Mathf.Floor((float)a / b);
     }
 
-    private static IEnumerable<Transform> GetChildren(Transform parent)
-    {
-        for (int i = 0; i < parent.childCount; i++)
-        {
-            yield return parent.GetChild(i);
-        }
-    }
-
     public static void SetLayerRecursively(GameObject gameObject, int layer)
     {
         gameObject.layer = layer;
 
-        foreach (Transform child in GetChildren(gameObject.transform)) {
+        foreach (Transform child in gameObject.transform) {
             SetLayerRecursively(child.gameObject, layer);
         }
     }

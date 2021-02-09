@@ -95,9 +95,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeb34a9ffc6054e44af8f512c70699cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventoryTransformData:
+    parent: {fileID: 0}
+    localPosition: {x: 0, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: 0, w: 0}
+    localScale: {x: 1000, y: 1000, z: 1000}
+  overrideForInspector: 0
+  inspectorTransformData:
+    parent: {fileID: 0}
+    localPosition: {x: 0, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: 0, w: 0}
+    localScale: {x: 0, y: 0, z: 0}
+  autoInspect: 0
   position: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0, w: 1}
   scale: {x: 1000, y: 1000, z: 1000}
+  inspectorPosition: {x: 0, y: 0, z: 0}
+  inspectorRotation: {x: 0, y: 0, z: 0, w: 1}
+  inspectorScale: {x: 1, y: 1, z: 1}
 --- !u!135 &6922882001366151926
 SphereCollider:
   m_ObjectHideFlags: 0

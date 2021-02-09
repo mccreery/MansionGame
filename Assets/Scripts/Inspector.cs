@@ -3,75 +3,52 @@
 public class Inspector : MonoBehaviour
 {
     private ItemPickup item;
-    public ItemPickup Item
-    {
-        get => item;
-        set
-        {
-            item = value;
 
-            // Remove previous item
-            if (gameObject.transform.childCount > 0)
-            {
-                Destroy(gameObject.transform.GetChild(0).gameObject);
-            }
-
-            // Clone new item for viewing
-            viewedObject = Instantiate(item.gameObject, transform);
-            viewedObject.SetActive(true);
-            Hotbar.SetLayerRecursively(viewedObject, cameraLayer);
-
-            if (item.overrideForInspector)
-            {
-                viewedObject.transform.localPosition = item.inspectorPosition;
-                viewedObject.transform.localRotation = item.inspectorRotation;
-                viewedObject.transform.localScale = item.inspectorScale;
-            }
-            else
-            {
-                viewedObject.transform.localPosition = item.position;
-                viewedObject.transform.localRotation = item.rotation;
-                viewedObject.transform.localScale = item.scale;
-            }
-        }
-    }
-
-    private GameObject viewedObject;
+    // Used to return the item to the hotbar when finished inspecting
+    private Transform previousParent;
 
     public int cameraLayer;
     public float rotateSensitivity = 1;
     public GameObject hotbar;
     public MouseLook mouseLook;
 
-    public void Open()
+    public void Inspect(ItemPickup item)
     {
         mouseLook.enabled = false;
+        Cursor.visible = false;
         hotbar.SetActive(false);
         gameObject.SetActive(true);
+
+        this.item = item;
+        previousParent = item.transform.parent;
+        item.transform.SetParent(transform, false);
+        item.InspectorTransformData.CopyTo(item.transform, false);
     }
 
     public void Close()
     {
         mouseLook.enabled = true;
+        Cursor.visible = true;
         hotbar.SetActive(true);
         gameObject.SetActive(false);
+
+        item.transform.SetParent(previousParent, false);
+        item.InventoryTransformData.CopyTo(item.transform, false);
     }
+
+    public bool IsOpen => gameObject.activeSelf;
 
     private Vector2 lastMousePosition;
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            Close();
-        }
-        else if (Input.GetButton("Fire2"))
+        if (Input.GetButton("Fire2"))
         {
             if (!Input.GetButtonDown("Fire2"))
             {
                 Vector2 mouseDelta = (Vector2)Input.mousePosition - lastMousePosition;
-                viewedObject.transform.Rotate(Camera.main.transform.up, -mouseDelta.x * rotateSensitivity, Space.World);
-                viewedObject.transform.Rotate(Camera.main.transform.right, mouseDelta.y * rotateSensitivity, Space.World);
+                item.transform.Rotate(Camera.main.transform.up, -mouseDelta.x * rotateSensitivity, Space.World);
+                item.transform.Rotate(Camera.main.transform.right, mouseDelta.y * rotateSensitivity, Space.World);
             }
             lastMousePosition = Input.mousePosition;
         }
