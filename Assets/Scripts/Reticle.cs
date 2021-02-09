@@ -51,7 +51,14 @@ public class Reticle : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit[] hits = Physics.RaycastAll(ray, float.PositiveInfinity, inventoryMask);
 
-            pointOfInterest = GetInspectorInteraction(hits);
+            if (!Input.GetButton("Fire2"))
+            {
+                pointOfInterest = GetInspectorInteraction(hits);
+            }
+            else
+            {
+                pointOfInterest = null;
+            }
         }
         else
         {
