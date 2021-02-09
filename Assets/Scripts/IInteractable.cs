@@ -7,7 +7,7 @@ public interface IInteractable
 
 public class Interactable : IInteractable
 {
-    private Action<Hotbar> interact;
+    private readonly Action<Hotbar> interact;
 
     public Interactable(Action<Hotbar> interact)
     {
