@@ -142,7 +142,7 @@ public class Hotbar : MonoBehaviour
     public void Inspect()
     {
         inspector.Item = this[selectedSlot];
-        inspector.Open();
+        inspector.Open = true;
     }
 
     private float lastScrollTime = Mathf.NegativeInfinity;

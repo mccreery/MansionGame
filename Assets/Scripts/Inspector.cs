@@ -43,18 +43,15 @@ public class Inspector : MonoBehaviour
     public GameObject hotbar;
     public MouseLook mouseLook;
 
-    public void Open()
+    public bool Open
     {
-        mouseLook.enabled = false;
-        hotbar.SetActive(false);
-        gameObject.SetActive(true);
-    }
-
-    public void Close()
-    {
-        mouseLook.enabled = true;
-        hotbar.SetActive(true);
-        gameObject.SetActive(false);
+        get => gameObject.activeSelf;
+        set
+        {
+            mouseLook.enabled = !value;
+            hotbar.SetActive(!value);
+            gameObject.SetActive(value);
+        }
     }
 
     private Vector2 lastMousePosition;
@@ -63,7 +60,7 @@ public class Inspector : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Close();
+            Open = false;
         }
         else if (Input.GetButton("Fire2"))
         {
