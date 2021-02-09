@@ -49,6 +49,7 @@ public class Inspector : MonoBehaviour
         set
         {
             mouseLook.enabled = !value;
+            Cursor.visible = !value;
             hotbar.SetActive(!value);
             gameObject.SetActive(value);
         }

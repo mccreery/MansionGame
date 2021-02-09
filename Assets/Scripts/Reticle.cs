@@ -16,12 +16,15 @@ public class Reticle : MonoBehaviour
     private float radiusVelocity;
 
     private Image image;
+    private RectTransform rectTransform;
 
     private void Start()
     {
         image = GetComponent<Image>();
         // Copy material so it doesn't update asset
         image.material = new Material(image.material);
+
+        rectTransform = GetComponent<RectTransform>();
     }
 
     public Hotbar hotbar;
@@ -43,6 +46,8 @@ public class Reticle : MonoBehaviour
 
         if (inspector.Open)
         {
+            transform.position = Input.mousePosition;
+
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit[] hits = Physics.RaycastAll(ray, float.PositiveInfinity, inventoryMask);
 
@@ -50,6 +55,8 @@ public class Reticle : MonoBehaviour
         }
         else
         {
+            rectTransform.anchoredPosition = Vector2.zero;
+
             Ray ray = Camera.main.ViewportPointToRay(new Vector2(0.5f, 0.5f));
             Hit = Physics.Raycast(ray, out raycastHit, float.PositiveInfinity, ~inventoryMask);
 
