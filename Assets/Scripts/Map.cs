@@ -49,6 +49,7 @@ public class Map : MonoBehaviour
             PinPoint pointB = pinnedPoints[i * 2 + 1];
 
             Vector3 stringOffset = new Vector3(0, stringHeight);
+            stringOffset = transform.TransformVector(stringOffset);
 
             if (pointA != null && pointB != null)
             {
