@@ -479,25 +479,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2091516400535908832}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1114287905 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5415635712524430950, guid: fe8c851f45f21b94b8386b341398db0f,
-    type: 3}
-  m_PrefabInstance: {fileID: 5181771997174056655}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1114287907
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1114287905}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.6665446, y: 0.94951504, z: 1.4661809}
-  m_Center: {x: 1.2085023, y: 0.56852406, z: 0.48029387}
 --- !u!114 &1238668296 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3513557685278983010, guid: da3b5a9ec695a8049ba289fdcc537b5a,
@@ -1271,7 +1252,7 @@ PrefabInstance:
     - target: {fileID: 5181771997433328253, guid: fe8c851f45f21b94b8386b341398db0f,
         type: 3}
       propertyPath: m_Name
-      value: DiningRoom
+      value: Kitchen
       objectReference: {fileID: 0}
     - target: {fileID: 7512764722696271774, guid: fe8c851f45f21b94b8386b341398db0f,
         type: 3}
@@ -1365,7 +1346,7 @@ PrefabInstance:
     - target: {fileID: 6432352743699020114, guid: 2aaa4911843e4b24c8d6360d7da0db9d,
         type: 3}
       propertyPath: m_Name
-      value: Kitchen
+      value: DiningRoom
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2aaa4911843e4b24c8d6360d7da0db9d, type: 3}
