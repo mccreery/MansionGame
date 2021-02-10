@@ -268,6 +268,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.6695857, y: 2.0072157, z: 1.9547557}
   m_Center: {x: -0.043322384, y: 1.0036079, z: 0.046545565}
+--- !u!4 &477304131 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5181771997433328252, guid: 2aaa4911843e4b24c8d6360d7da0db9d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6432352745498181819}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &525049882 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5567342458122744530, guid: 4ff1dd381573f8a48ab5a1a4a46fc3c9,
@@ -436,17 +442,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da3b5a9ec695a8049ba289fdcc537b5a, type: 3}
---- !u!4 &817116339 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5181771997433328252, guid: fe8c851f45f21b94b8386b341398db0f,
-    type: 3}
-  m_PrefabInstance: {fileID: 5181771997174056655}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &854418014 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4743420343972367244, guid: 44f885f847057844aafebf94d2537ff3,
     type: 3}
   m_PrefabInstance: {fileID: 4743420344733854162}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &877853816 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6432352743699020113, guid: fe8c851f45f21b94b8386b341398db0f,
+    type: 3}
+  m_PrefabInstance: {fileID: 5181771997174056655}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &938015776 stripped
 Transform:
@@ -454,50 +460,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 387395123806615568}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1019951410 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5554462788709341933, guid: 44f885f847057844aafebf94d2537ff3,
-    type: 3}
-  m_PrefabInstance: {fileID: 4743420344733854162}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1019951412
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1019951410}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 165.07457, y: 264.26755, z: 209.85565}
-  m_Center: {x: 1.7881283, y: -0.16235289, z: 0.825851}
 --- !u!4 &1104731220 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2091516401578700212, guid: a87f48b8b75f23e46acc72aee2be3fec,
     type: 3}
   m_PrefabInstance: {fileID: 2091516400535908832}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1114287905 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5415635712524430950, guid: fe8c851f45f21b94b8386b341398db0f,
-    type: 3}
-  m_PrefabInstance: {fileID: 5181771997174056655}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1114287907
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1114287905}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.6665446, y: 0.94951504, z: 1.4661809}
-  m_Center: {x: 1.2085023, y: 0.56852406, z: 0.48029387}
 --- !u!114 &1238668296 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3513557685278983010, guid: da3b5a9ec695a8049ba289fdcc537b5a,
@@ -548,8 +516,8 @@ Transform:
   - {fileID: 854418014}
   - {fileID: 26752322}
   - {fileID: 1280355621}
-  - {fileID: 817116339}
-  - {fileID: 2002647530}
+  - {fileID: 877853816}
+  - {fileID: 477304131}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -740,12 +708,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &2002647530 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6432352743699020113, guid: 2aaa4911843e4b24c8d6360d7da0db9d,
-    type: 3}
-  m_PrefabInstance: {fileID: 6432352745498181819}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &387395123806615568
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1273,6 +1235,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DiningRoom
       objectReference: {fileID: 0}
+    - target: {fileID: 6432352743699020113, guid: fe8c851f45f21b94b8386b341398db0f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7512764722696271774, guid: fe8c851f45f21b94b8386b341398db0f,
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
@@ -1306,6 +1273,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_BoundingSphereOverride.y
       value: 3.0246e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 5181771997433328252, guid: 2aaa4911843e4b24c8d6360d7da0db9d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6432352743699020113, guid: 2aaa4911843e4b24c8d6360d7da0db9d,
         type: 3}
