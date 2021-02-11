@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8799314979378500054}
   - component: {fileID: 6771589834444236060}
   - component: {fileID: 5214130747415036245}
-  - component: {fileID: 6922882001366151926}
+  - component: {fileID: 8936980363688150500}
   m_Layer: 0
   m_Name: Vinyl_disc
   m_TagString: Interactable
@@ -107,14 +107,8 @@ MonoBehaviour:
     localRotation: {x: 0, y: 0, z: 0, w: 0}
     localScale: {x: 0, y: 0, z: 0}
   autoInspect: 0
-  position: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0, w: 1}
-  scale: {x: 1000, y: 1000, z: 1000}
-  inspectorPosition: {x: 0, y: 0, z: 0}
-  inspectorRotation: {x: 0, y: 0, z: 0, w: 1}
-  inspectorScale: {x: 1, y: 1, z: 1}
---- !u!135 &6922882001366151926
-SphereCollider:
+--- !u!65 &8936980363688150500
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -124,5 +118,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.024798777
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.049597558, y: 0.049597535, z: 0.0025}
+  m_Center: {x: -9.313229e-10, y: 9.313225e-10, z: 0.000000029802322}
