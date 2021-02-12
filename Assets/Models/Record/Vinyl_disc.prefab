@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5598723993745890931}
   - component: {fileID: 8799314979378500054}
   - component: {fileID: 6771589834444236060}
-  - component: {fileID: 5214130747415036245}
   - component: {fileID: 8936980363688150500}
+  - component: {fileID: 2301839371648562179}
   m_Layer: 0
   m_Name: Vinyl_disc
   m_TagString: Interactable
@@ -83,7 +83,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5214130747415036245
+--- !u!65 &8936980363688150500
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5114252320114099401}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049597558, y: 0.049597535, z: 0.0025}
+  m_Center: {x: -9.313229e-10, y: 9.313225e-10, z: 0.000000029802322}
+--- !u!114 &2301839371648562179
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,7 +105,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5114252320114099401}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeb34a9ffc6054e44af8f512c70699cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 724922561ff235c43a149b1db7a3f660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryTransformData:
@@ -107,16 +120,4 @@ MonoBehaviour:
     localRotation: {x: 0, y: 0, z: 0, w: 0}
     localScale: {x: 0, y: 0, z: 0}
   autoInspect: 0
---- !u!65 &8936980363688150500
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5114252320114099401}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.049597558, y: 0.049597535, z: 0.0025}
-  m_Center: {x: -9.313229e-10, y: 9.313225e-10, z: 0.000000029802322}
+  playClip: {fileID: 0}
