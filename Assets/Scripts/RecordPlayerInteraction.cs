@@ -55,4 +55,6 @@ public class RecordPlayerInteraction : MonoBehaviour, IInteractable
         audioSource.clip = song;
         audioSource.Play();
     }
+
+    public void Smash() => cabinet.Smash();
 }

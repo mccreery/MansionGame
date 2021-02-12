@@ -8,8 +8,11 @@ public class Cabinet : MonoBehaviour
 
     public void Smash()
     {
-        fixedObject.SetActive(false);
-        brokenObject.SetActive(true);
-        GetComponent<AudioSource>().PlayOneShot(smashClip);
+        if (!brokenObject.activeSelf)
+        {
+            fixedObject.SetActive(false);
+            brokenObject.SetActive(true);
+            GetComponent<AudioSource>().PlayOneShot(smashClip);
+        }
     }
 }
