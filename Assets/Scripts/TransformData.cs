@@ -7,7 +7,7 @@ public class TransformData
     public Transform parent;
     public Vector3 localPosition;
     public Quaternion localRotation;
-    public Vector3 localScale;
+    public Vector3 localScale = Vector3.one;
 
     public TransformData(Transform parent, Vector3 localPosition, Quaternion localRotation, Vector3 localScale)
     {
