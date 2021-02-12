@@ -1,5 +1,40 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2836886630537036251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3285497718736222634}
+  m_Layer: 0
+  m_Name: TravelBooks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3285497718736222634
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2836886630537036251}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.543, y: 1.4827552, z: 8.481159}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7394292247502757569}
+  - {fileID: 1839826952425479446}
+  - {fileID: 932052358856168306}
+  - {fileID: 7587279457289741569}
+  - {fileID: 8895544956194236986}
+  m_Father: {fileID: 4743420343972367244}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4743420342962959435
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,6 +147,7 @@ Transform:
   - {fileID: 6008587698207262350}
   - {fileID: 1817799415755129303}
   - {fileID: 6721101717637792840}
+  - {fileID: 3285497718736222634}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -249,8 +285,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 270.82315, y: 309.68677, z: 266.66135}
-  m_Center: {x: 93.47047, y: 84.38334, z: -2.2315364}
+  m_Size: {x: 270.82315, y: 309.68677, z: 224.61198}
+  m_Center: {x: 93.47046, y: 84.38334, z: -23.256218}
 --- !u!114 &2504567614472277241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,6 +301,166 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   message: The first tasteful thing I've seen in here.
   sound: {fileID: 0}
+--- !u!1001 &417905356987091631
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3285497718736222634}
+    m_Modifications:
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.014995575
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.25475514
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.024840355
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.49999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.50000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.49999976
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397487, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_Name
+      value: TravelBookDubai
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4e7a261d142d85e4d9629de717bca2a6, type: 3}
+--- !u!4 &7394292247502757569 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 417905356987091631}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &727913383159853423
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3285497718736222634}
+    m_Modifications:
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.28899956
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.255
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.024840355
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.49999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.50000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.49999976
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397487, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_Name
+      value: TravelBookBrazil
+      objectReference: {fileID: 0}
+    - target: {fileID: 7768399848481756526, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_Text
+      value: Visit Brazil
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167148213131267342, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_Text
+      value: Visit Brazil
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4e7a261d142d85e4d9629de717bca2a6, type: 3}
+--- !u!4 &7587279457289741569 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 727913383159853423}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1026384667883052325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -354,6 +550,91 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8690482690463800766, guid: 0e92b5c31c2daf54abb08b33757fd59f,
     type: 3}
   m_PrefabInstance: {fileID: 1026384667883052325}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1739000972876250708
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3285497718736222634}
+    m_Modifications:
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.38500023
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.255
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.024840355
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.49999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.50000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.49999976
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397487, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_Name
+      value: TravelBookRussia
+      objectReference: {fileID: 0}
+    - target: {fileID: 7768399848481756526, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_Text
+      value: Visit Russia
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167148213131267342, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_Text
+      value: Visit Russia
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4e7a261d142d85e4d9629de717bca2a6, type: 3}
+--- !u!4 &8895544956194236986 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1739000972876250708}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1815504285576769105
 PrefabInstance:
@@ -574,15 +855,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4afc32c6e4071b847835878b6bf2d4c6, type: 3}
---- !u!95 &4240675738036275715 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 851805435871633852, guid: 4afc32c6e4071b847835878b6bf2d4c6,
-    type: 3}
-  m_PrefabInstance: {fileID: 3534147694520249279}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2839388469157724904 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1615763529767954775, guid: 4afc32c6e4071b847835878b6bf2d4c6,
+    type: 3}
+  m_PrefabInstance: {fileID: 3534147694520249279}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4240675738036275715 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 851805435871633852, guid: 4afc32c6e4071b847835878b6bf2d4c6,
     type: 3}
   m_PrefabInstance: {fileID: 3534147694520249279}
   m_PrefabAsset: {fileID: 0}
@@ -978,6 +1259,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bookshelf (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 814407491871505364, guid: c026cc218d29db0459f3ba6506b24d24,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.349
+      objectReference: {fileID: 0}
     - target: {fileID: 3515141431581797587, guid: c026cc218d29db0459f3ba6506b24d24,
         type: 3}
       propertyPath: m_RootOrder
@@ -1032,6 +1318,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6376998961774574751, guid: c026cc218d29db0459f3ba6506b24d24,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.42333046
+      objectReference: {fileID: 0}
+    - target: {fileID: 6376998961774574751, guid: c026cc218d29db0459f3ba6506b24d24,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.021203756
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c026cc218d29db0459f3ba6506b24d24, type: 3}
@@ -1832,7 +2128,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f333dc0b69c39b8419b7104b666598ed,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.924
+      value: -12.694
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f333dc0b69c39b8419b7104b666598ed,
         type: 3}
@@ -1891,15 +2187,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f333dc0b69c39b8419b7104b666598ed, type: 3}
---- !u!4 &6721101717637792840 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f333dc0b69c39b8419b7104b666598ed,
-    type: 3}
-  m_PrefabInstance: {fileID: 6542779299218121635}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6200883611040866034 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f333dc0b69c39b8419b7104b666598ed,
+    type: 3}
+  m_PrefabInstance: {fileID: 6542779299218121635}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6721101717637792840 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f333dc0b69c39b8419b7104b666598ed,
     type: 3}
   m_PrefabInstance: {fileID: 6542779299218121635}
   m_PrefabAsset: {fileID: 0}
@@ -2137,4 +2433,174 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1089952261768699377, guid: 6e985b5af67a5264088f5504df8de5d1,
     type: 3}
   m_PrefabInstance: {fileID: 7757803655775798626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8051925430863562524
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3285497718736222634}
+    m_Modifications:
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.20199966
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.255
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.024840355
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.49999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.50000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.49999976
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397487, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_Name
+      value: TravelBookNigeria
+      objectReference: {fileID: 0}
+    - target: {fileID: 7768399848481756526, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_Text
+      value: Visit Nigeria
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167148213131267342, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_Text
+      value: Visit Nigeria
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4e7a261d142d85e4d9629de717bca2a6, type: 3}
+--- !u!4 &932052358856168306 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 8051925430863562524}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8852141690751011192
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3285497718736222634}
+    m_Modifications:
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.1079998
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.25475514
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.024840355
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.49999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.50000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.49999976
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156641101655397487, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_Name
+      value: TravelBookIndia
+      objectReference: {fileID: 0}
+    - target: {fileID: 7768399848481756526, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_Text
+      value: Visit India
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167148213131267342, guid: 4e7a261d142d85e4d9629de717bca2a6,
+        type: 3}
+      propertyPath: m_Text
+      value: Visit India
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4e7a261d142d85e4d9629de717bca2a6, type: 3}
+--- !u!4 &1839826952425479446 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7156641101655397486, guid: 4e7a261d142d85e4d9629de717bca2a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 8852141690751011192}
   m_PrefabAsset: {fileID: 0}
