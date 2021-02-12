@@ -19,6 +19,21 @@ public class TablePuzzle : MonoBehaviour
         msHumphreys, mrsBaker, mrStewart, mrBaker, mrFrederick, drWilson
     };
 
+    public GameObject key;
+
+    private void Awake()
+    {
+        key.SetActive(false);
+    }
+
+    public void UpdateCheck()
+    {
+        if (Check())
+        {
+            key.SetActive(true);
+        }
+    }
+
     public bool Check()
     {
         int humph = GetPlace(msHumphreys);

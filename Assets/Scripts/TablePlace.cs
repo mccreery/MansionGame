@@ -26,6 +26,7 @@ public class TablePlace : MonoBehaviour, IInteractable
         {
             placed = hotbar.Remove(hotbar.SelectedSlot, true);
             MovePlaced();
+            puzzle.UpdateCheck();
         }
     }
 
