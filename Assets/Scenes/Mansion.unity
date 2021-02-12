@@ -436,12 +436,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da3b5a9ec695a8049ba289fdcc537b5a, type: 3}
---- !u!4 &767870889 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6432352743699020113, guid: fe8c851f45f21b94b8386b341398db0f,
+--- !u!114 &846293045 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6250465679021442663, guid: 2aaa4911843e4b24c8d6360d7da0db9d,
     type: 3}
-  m_PrefabInstance: {fileID: 5181771997174056655}
+  m_PrefabInstance: {fileID: 6432352745498181819}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb34a9ffc6054e44af8f512c70699cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &854418014 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4743420343972367244, guid: 44f885f847057844aafebf94d2537ff3,
@@ -473,17 +479,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 165.07457, y: 264.26755, z: 209.85565}
   m_Center: {x: 1.7881283, y: -0.16235289, z: 0.825851}
+--- !u!4 &1062874228 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6432352743699020113, guid: 2aaa4911843e4b24c8d6360d7da0db9d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6432352745498181819}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1104731220 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2091516401578700212, guid: a87f48b8b75f23e46acc72aee2be3fec,
     type: 3}
   m_PrefabInstance: {fileID: 2091516400535908832}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1192053147 stripped
+--- !u!4 &1160127617 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 5181771997433328252, guid: 2aaa4911843e4b24c8d6360d7da0db9d,
+  m_CorrespondingSourceObject: {fileID: 5181771997433328252, guid: fe8c851f45f21b94b8386b341398db0f,
     type: 3}
-  m_PrefabInstance: {fileID: 6432352745498181819}
+  m_PrefabInstance: {fileID: 5181771997174056655}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1238668296 stripped
 MonoBehaviour:
@@ -535,8 +547,8 @@ Transform:
   - {fileID: 854418014}
   - {fileID: 26752322}
   - {fileID: 1280355621}
-  - {fileID: 767870889}
-  - {fileID: 1192053147}
+  - {fileID: 1160127617}
+  - {fileID: 1062874228}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -921,6 +933,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7078779011617213664, guid: 26849654399de1442bc08a7594b16ca5,
+        type: 3}
+      propertyPath: key
+      value: 
+      objectReference: {fileID: 846293045}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26849654399de1442bc08a7594b16ca5, type: 3}
 --- !u!1001 &2023113292231844403
