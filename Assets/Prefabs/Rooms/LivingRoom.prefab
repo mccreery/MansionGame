@@ -247,6 +247,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8748723101450620319}
     m_Modifications:
+    - target: {fileID: 618486566989660339, guid: 163c3fbaed74bc144971d516474ad239,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f3d4d589c47aed4cbf14eb206192cdf, type: 2}
     - target: {fileID: 2301839371648562179, guid: 163c3fbaed74bc144971d516474ad239,
         type: 3}
       propertyPath: recordPlayerAnimationState
@@ -255,7 +260,7 @@ PrefabInstance:
     - target: {fileID: 5114252320114099401, guid: 163c3fbaed74bc144971d516474ad239,
         type: 3}
       propertyPath: m_Name
-      value: Vinyl_disc
+      value: ComeOnOut
       objectReference: {fileID: 0}
     - target: {fileID: 5598723993745890931, guid: 163c3fbaed74bc144971d516474ad239,
         type: 3}
@@ -2339,6 +2344,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8748723101450620319}
     m_Modifications:
+    - target: {fileID: 618486566989660339, guid: 163c3fbaed74bc144971d516474ad239,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7622398e59e2d4849a7932c85319f1c4, type: 2}
     - target: {fileID: 2301839371648562179, guid: 163c3fbaed74bc144971d516474ad239,
         type: 3}
       propertyPath: recordPlayerAnimationState
@@ -2347,7 +2357,7 @@ PrefabInstance:
     - target: {fileID: 5114252320114099401, guid: 163c3fbaed74bc144971d516474ad239,
         type: 3}
       propertyPath: m_Name
-      value: Vinyl_disc (2)
+      value: ReasonsToHope
       objectReference: {fileID: 0}
     - target: {fileID: 5598723993745890931, guid: 163c3fbaed74bc144971d516474ad239,
         type: 3}
@@ -2578,6 +2588,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8748723101450620319}
     m_Modifications:
+    - target: {fileID: 618486566989660339, guid: 163c3fbaed74bc144971d516474ad239,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a25fc5460e3ce104e965b55278bf3fbc, type: 2}
     - target: {fileID: 2301839371648562179, guid: 163c3fbaed74bc144971d516474ad239,
         type: 3}
       propertyPath: recordPlayerAnimationState
@@ -2586,7 +2601,7 @@ PrefabInstance:
     - target: {fileID: 5114252320114099401, guid: 163c3fbaed74bc144971d516474ad239,
         type: 3}
       propertyPath: m_Name
-      value: Vinyl_disc (1)
+      value: EsJammyJams
       objectReference: {fileID: 0}
     - target: {fileID: 5598723993745890931, guid: 163c3fbaed74bc144971d516474ad239,
         type: 3}
@@ -2667,6 +2682,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8748723101450620319}
     m_Modifications:
+    - target: {fileID: 618486566989660339, guid: 163c3fbaed74bc144971d516474ad239,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 888775ba751a71e48b35e0eac489de80, type: 2}
     - target: {fileID: 2301839371648562179, guid: 163c3fbaed74bc144971d516474ad239,
         type: 3}
       propertyPath: recordPlayerAnimationState
@@ -2675,7 +2695,7 @@ PrefabInstance:
     - target: {fileID: 5114252320114099401, guid: 163c3fbaed74bc144971d516474ad239,
         type: 3}
       propertyPath: m_Name
-      value: Vinyl_disc (4)
+      value: TheBarberOfSeville
       objectReference: {fileID: 0}
     - target: {fileID: 5598723993745890931, guid: 163c3fbaed74bc144971d516474ad239,
         type: 3}
@@ -2756,6 +2776,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8748723101450620319}
     m_Modifications:
+    - target: {fileID: 618486566989660339, guid: 163c3fbaed74bc144971d516474ad239,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cc016aa328dbbc447a84f99ea3a9014a, type: 2}
     - target: {fileID: 2301839371648562179, guid: 163c3fbaed74bc144971d516474ad239,
         type: 3}
       propertyPath: recordPlayerAnimationState
@@ -2764,7 +2789,7 @@ PrefabInstance:
     - target: {fileID: 5114252320114099401, guid: 163c3fbaed74bc144971d516474ad239,
         type: 3}
       propertyPath: m_Name
-      value: Vinyl_disc (3)
+      value: SonatinaNo2
       objectReference: {fileID: 0}
     - target: {fileID: 5598723993745890931, guid: 163c3fbaed74bc144971d516474ad239,
         type: 3}
