@@ -51,7 +51,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: baef77c6f12f93f4799107c73abb7fe7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,7 +83,7 @@ TextMesh:
   m_GameObject: {fileID: 1670212378005405104}
   m_Text: Visit Dubai
   m_OffsetZ: 0
-  m_CharacterSize: 0.03
+  m_CharacterSize: 0.004
   m_LineSpacing: 1
   m_Anchor: 4
   m_Alignment: 0
@@ -91,7 +91,7 @@ TextMesh:
   m_FontSize: 0
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: b5d2bf1210f69594889373634c33400f, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
@@ -146,7 +146,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: baef77c6f12f93f4799107c73abb7fe7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -178,7 +178,7 @@ TextMesh:
   m_GameObject: {fileID: 3086910992094645266}
   m_Text: Visit Dubai
   m_OffsetZ: 0
-  m_CharacterSize: 0.03
+  m_CharacterSize: 0.004
   m_LineSpacing: 1
   m_Anchor: 4
   m_Alignment: 0
@@ -186,7 +186,7 @@ TextMesh:
   m_FontSize: 0
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: b5d2bf1210f69594889373634c33400f, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
@@ -241,7 +241,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: baef77c6f12f93f4799107c73abb7fe7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -273,7 +273,7 @@ TextMesh:
   m_GameObject: {fileID: 6966304213970072651}
   m_Text: XYPL-3409
   m_OffsetZ: 0
-  m_CharacterSize: 0.01
+  m_CharacterSize: 0.002
   m_LineSpacing: 1
   m_Anchor: 4
   m_Alignment: 0
@@ -281,7 +281,7 @@ TextMesh:
   m_FontSize: 0
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: b5d2bf1210f69594889373634c33400f, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
@@ -395,8 +395,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aeb34a9ffc6054e44af8f512c70699cb, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   inventoryTransformData:
     parent: {fileID: 0}
     localPosition: {x: 0, y: 0, z: 0}
