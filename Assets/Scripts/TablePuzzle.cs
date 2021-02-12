@@ -43,7 +43,8 @@ public class TablePuzzle : MonoBehaviour
         int fred = GetPlace(mrFrederick);
         int wil = GetPlace(drWilson);
 
-        return Math.Abs(bake - stew) == 1 // Mr Baker and Mr Stewart are old friends
+        return humph != 0 && bake != 0 && stew != 0 && mrBake != 0 && fred != 0 && wil != 0
+            && Math.Abs(mrBake - stew) == 1 // Mr Baker and Mr Stewart are old friends
             && (humph == 5 || humph == 6) // Ms Humphreys is a good cook
             && (mrBake == 2 && bake == 3 || mrBake == 3 && bake == 2 || mrBake == 5 && bake == 6 || mrBake == 6 && bake == 5) // Mr and Mrs baker sit side by side
             && Math.Abs(wil - stew) > 1 // Mr Stewart is squeamish & Dr Wilson tells gory stories
@@ -53,6 +54,6 @@ public class TablePuzzle : MonoBehaviour
 
     private int GetPlace(ItemPickup person)
     {
-        return Array.IndexOf(places, person.transform.parent.GetComponent<TablePlace>());
+        return 1 + Array.IndexOf(places, person.transform.parent.parent.GetComponent<TablePlace>());
     }
 }
