@@ -12,6 +12,8 @@ public class Keypad : MonoBehaviour
 
     private AudioSource audioSource;
 
+    public float timeoutDuration = 5f;
+
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
@@ -20,6 +22,44 @@ public class Keypad : MonoBehaviour
 
     public void PressButton(int button)
     {
-        textMesh.text += button;
+        if (!timedOut)
+        {
+            textMesh.text += button;
+
+            if (textMesh.text.Length == 4)
+            {
+                if (textMesh.text == correctCode)
+                {
+                    // Open vault
+                    vaultDoor.Play(vaultState, -1, 0);
+                }
+                else
+                {
+                    audioSource.PlayOneShot(accessDenied);
+                    timeout = Time.time + timeoutDuration;
+                }
+            }
+        }
+        else
+        {
+            audioSource.PlayOneShot(accessDenied);
+        }
+    }
+
+    private float timeout;
+    private bool timedOut;
+
+    private void Update()
+    {
+        if (Time.time < timeout)
+        {
+            timedOut = true;
+            textMesh.text = $"{Mathf.CeilToInt(timeout - Time.time)}---";
+        }
+        else if (timedOut)
+        {
+            textMesh.text = "";
+            timedOut = false;
+        }
     }
 }
