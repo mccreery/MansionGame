@@ -13,6 +13,7 @@ public class Keypad : MonoBehaviour
     private AudioSource audioSource;
 
     public float timeoutDuration = 5f;
+    private int wrongGuesses;
 
     private void Awake()
     {
@@ -36,7 +37,12 @@ public class Keypad : MonoBehaviour
                 else
                 {
                     audioSource.PlayOneShot(accessDenied);
-                    timeout = Time.time + timeoutDuration;
+
+                    // Exponential timeout
+                    float duration = timeoutDuration * (1 << wrongGuesses);
+                    ++wrongGuesses;
+
+                    timeout = Time.time + duration;
                 }
             }
         }
@@ -54,7 +60,7 @@ public class Keypad : MonoBehaviour
         if (Time.time < timeout)
         {
             timedOut = true;
-            textMesh.text = $"{Mathf.CeilToInt(timeout - Time.time)}---";
+            textMesh.text = Mathf.CeilToInt(timeout - Time.time).ToString().PadRight(4, '-');
         }
         else if (timedOut)
         {
