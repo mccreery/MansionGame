@@ -340,6 +340,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2575688351236911309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5330249022597473530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2735e833c2af39347abf207f8e3757a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: I think it's broken.
+  sound: {fileID: 0}
+--- !u!65 &8547662336079178705
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5330249022597473530}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &387395123769597306
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -787,11 +814,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: PreBrokenVase
       objectReference: {fileID: 0}
+    - target: {fileID: 5519325096905559345, guid: 0015d779c3438d845a5539353d7ca406,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0015d779c3438d845a5539353d7ca406, type: 3}
 --- !u!4 &4806195751597899328 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5175555448149120907, guid: 0015d779c3438d845a5539353d7ca406,
+    type: 3}
+  m_PrefabInstance: {fileID: 387395124184738251}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5330249022597473530 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5519325096905559345, guid: 0015d779c3438d845a5539353d7ca406,
     type: 3}
   m_PrefabInstance: {fileID: 387395124184738251}
   m_PrefabAsset: {fileID: 0}

@@ -2699,12 +2699,6 @@ MonoBehaviour:
     localRotation: {x: 0, y: 0, z: 0, w: 0}
     localScale: {x: 0, y: 0, z: 0}
   autoInspect: 0
-  position: {x: 0, y: -5, z: 2}
-  rotation: {x: 0.37161887, y: -0.35633737, z: 0.08483052, w: -0.8530691}
-  scale: {x: 17, y: 17, z: 17}
-  inspectorPosition: {x: 0, y: 0, z: 0}
-  inspectorRotation: {x: 0, y: 0, z: 0, w: 1}
-  inspectorScale: {x: 1, y: 1, z: 1}
 --- !u!1 &4013415783523086838
 GameObject:
   m_ObjectHideFlags: 0
@@ -5312,7 +5306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hammer: {fileID: 0}
-  cantUseText: It's too heavy to lift, and the lid is stuck.
+  cantUseText: I can't lift it. I can't even take the lid off.
   brokenVersion: {fileID: 5691131952715446691}
 --- !u!136 &8232831751618277916
 CapsuleCollider:
