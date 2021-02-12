@@ -5366,7 +5366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hammer: {fileID: 0}
-  cantUseText: It's too heavy to lift, and the lid is stuck.
+  cantUseText: I can't lift it. I can't even take the lid off.
   brokenVersion: {fileID: 5691131952715446691}
 --- !u!136 &8232831751618277916
 CapsuleCollider:

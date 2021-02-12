@@ -28,15 +28,8 @@ public class Message : MonoBehaviour
 
     public bool ShowMessage(string message)
     {
-        if (Time.time < startTime || Time.time > startTime + opacity.TotalTime)
-        {
-            text.text = message;
-            startTime = Time.time;
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        text.text = message;
+        startTime = Time.time;
+        return true;
     }
 }
