@@ -70,13 +70,7 @@ MonoBehaviour:
     localPosition: {x: 0, y: 0, z: 0}
     localRotation: {x: -0.57776076, y: -0.031780034, z: 0.03177952, w: 0.81496793}
     localScale: {x: 17, y: 17, z: 17}
-  autoInspect: 0
-  position: {x: 0, y: -5, z: 0}
-  rotation: {x: 0.37161887, y: -0.35633737, z: 0.08483052, w: -0.8530691}
-  scale: {x: 17, y: 17, z: 17}
-  inspectorPosition: {x: 0, y: 0, z: 0}
-  inspectorRotation: {x: -0.5777605, y: -0.03178008, z: 0.031779565, w: 0.814968}
-  inspectorScale: {x: 17, y: 17, z: 17}
+  autoInspect: 1
 --- !u!1001 &5292759199154526908
 PrefabInstance:
   m_ObjectHideFlags: 0

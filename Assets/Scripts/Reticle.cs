@@ -108,8 +108,8 @@ public class Reticle : MonoBehaviour
             {
                 IInteractable interactable = hit.transform.GetComponent<IInteractable>();
 
-                // Ignore world pickups
-                if (!(interactable is ItemPickup))
+                // Ignore root item
+                if (!(Object.ReferenceEquals(interactable, inspector.Item)))
                 {
                     return interactable;
                 }

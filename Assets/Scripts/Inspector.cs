@@ -3,6 +3,7 @@
 public class Inspector : MonoBehaviour
 {
     private ItemPickup item;
+    public ItemPickup Item => item;
 
     // Used to return the item to the hotbar when finished inspecting
     private Transform previousParent;
