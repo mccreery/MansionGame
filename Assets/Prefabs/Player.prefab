@@ -584,10 +584,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberOfSlots: 5
+  cameraLayer: 8
   slotPrefab: {fileID: 5841818873248836581, guid: 0d92f3d9186bfb740b9d11d8ba013c8a,
     type: 3}
   inspector: {fileID: 3513557685278983010}
-  cameraLayer: 8
   scrollCooldown: 0
 --- !u!1 &8864746476567452930
 GameObject:
@@ -639,8 +639,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraLayer: 8
   rotateSensitivity: 1
+  zoomSensitivity: 0.2
   hotbar: {fileID: 7517603502848746079}
   mouseLook: {fileID: 1398810660800396009}
+  minScale: 0.5
+  maxScale: 5
 --- !u!1001 &1988314119649581075
 PrefabInstance:
   m_ObjectHideFlags: 0

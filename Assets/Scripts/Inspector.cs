@@ -8,9 +8,14 @@ public class Inspector : MonoBehaviour
     private Transform previousParent;
 
     public int cameraLayer;
+
     public float rotateSensitivity = 1;
+    public float zoomSensitivity = 1;
+
     public GameObject hotbar;
     public MouseLook mouseLook;
+
+    private Vector3 restoreScale;
 
     public void Inspect(ItemPickup item)
     {
@@ -23,6 +28,9 @@ public class Inspector : MonoBehaviour
         previousParent = item.transform.parent;
         item.transform.SetParent(transform, false);
         item.InspectorTransformData.CopyTo(item.transform, false);
+
+        restoreScale = gameObject.transform.localScale;
+        scale = 1;
     }
 
     public void Close()
@@ -34,14 +42,26 @@ public class Inspector : MonoBehaviour
 
         item.transform.SetParent(previousParent, false);
         item.InventoryTransformData.CopyTo(item.transform, false);
+
+        gameObject.transform.localScale = restoreScale;
     }
 
     public bool IsOpen => gameObject.activeSelf;
 
     private Vector2 lastMousePosition;
 
+    private float scale;
+    public float minScale = 0.5f;
+    public float maxScale = 2.0f;
+
     private void Update()
     {
+        if (Input.mouseScrollDelta.y != 0)
+        {
+            scale = Mathf.Clamp(scale + Input.mouseScrollDelta.y * zoomSensitivity, minScale, maxScale);
+            gameObject.transform.localScale = restoreScale * scale;
+        }
+
         if (Input.GetButton("Fire2"))
         {
             if (!Input.GetButtonDown("Fire2"))
