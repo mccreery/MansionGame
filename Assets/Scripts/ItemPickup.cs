@@ -27,7 +27,11 @@ public class ItemPickup : MonoBehaviour, IInteractable
     {
         int slot = hotbar.Add(this);
 
-        if (autoInspect)
+        if (slot == -1)
+        {
+            FindObjectOfType<Message>().ShowMessage("I'm carrying too much.");
+        }
+        else if (autoInspect)
         {
             hotbar.SelectedSlot = slot;
             hotbar.Inspect();
