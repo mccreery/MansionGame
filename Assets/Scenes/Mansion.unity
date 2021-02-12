@@ -1384,7 +1384,7 @@ PrefabInstance:
     - target: {fileID: 5181771997433328253, guid: fe8c851f45f21b94b8386b341398db0f,
         type: 3}
       propertyPath: m_Name
-      value: DiningRoom
+      value: Kitchen
       objectReference: {fileID: 0}
     - target: {fileID: 6432352743699020113, guid: fe8c851f45f21b94b8386b341398db0f,
         type: 3}
@@ -1488,7 +1488,7 @@ PrefabInstance:
     - target: {fileID: 6432352743699020114, guid: 2aaa4911843e4b24c8d6360d7da0db9d,
         type: 3}
       propertyPath: m_Name
-      value: Kitchen
+      value: DiningRoom
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2aaa4911843e4b24c8d6360d7da0db9d, type: 3}

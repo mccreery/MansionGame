@@ -17,6 +17,10 @@ public class TransformData
         this.localScale = localScale;
     }
 
+    public TransformData() : this(null, Vector3.zero, Quaternion.identity, Vector3.one)
+    {
+    }
+
     public TransformData(Transform transform) : this(transform.parent, transform.localPosition, transform.localRotation, transform.localScale)
     {
     }
