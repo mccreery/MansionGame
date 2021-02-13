@@ -44,16 +44,56 @@ public class TablePuzzle : MonoBehaviour
         int wil = GetPlace(drWilson);
 
         return humph != 0 && bake != 0 && stew != 0 && mrBake != 0 && fred != 0 && wil != 0
-            && Math.Abs(mrBake - stew) == 1 // Mr Baker and Mr Stewart are old friends
+            && Adjacent(mrBake, stew) // Mr Baker and Mr Stewart are old friends
             && (humph == 5 || humph == 6) // Ms Humphreys is a good cook
-            && (mrBake == 2 && bake == 3 || mrBake == 3 && bake == 2 || mrBake == 5 && bake == 6 || mrBake == 6 && bake == 5) // Mr and Mrs baker sit side by side
-            && Math.Abs(wil - stew) > 1 // Mr Stewart is squeamish & Dr Wilson tells gory stories
-            && fred == 1 // Life of the party
-            && Math.Abs(fred - humph) > 1; // Mr Frederick & Ms Humphreys have fallen out
+            && SideBySide(mrBake, bake) // Mr and Mrs baker sit side by side
+            && !Adjacent(wil, stew) // Mr Stewart is squeamish & Dr Wilson tells gory stories
+            && (fred == 1 || fred == 4) // Wants to feel important
+            && !Adjacent(fred, humph); // Mr Frederick & Ms Humphreys have fallen out
     }
 
     private int GetPlace(ItemPickup person)
     {
-        return 1 + Array.IndexOf(places, person.transform.parent.parent.GetComponent<TablePlace>());
+        Transform transform = person.transform;
+        do
+        {
+            if (transform.GetComponent<TablePlace>() is TablePlace place)
+            {
+                return Array.IndexOf(places, place) + 1;
+            }
+            else
+            {
+                transform = transform.parent;
+            }
+        } while (transform != null);
+
+        return 0;
+    }
+
+    private static bool Adjacent(int seatA, int seatB)
+    {
+        MakeAscending(ref seatA, ref seatB);
+        return seatB - seatA == 1 || seatA == 1 && seatB == 6;
+    }
+
+    private static bool SideBySide(int seatA, int seatB)
+    {
+        MakeAscending(ref seatA, ref seatB);
+        return seatA == 2 && seatB == 3 || seatA == 5 && seatB == 6;
+    }
+
+    private static void MakeAscending<T>(ref T a, ref T b) where T : IComparable<T>
+    {
+        if (a.CompareTo(b) > 0)
+        {
+            Swap(ref a, ref b);
+        }
+    }
+
+    private static void Swap<T>(ref T a, ref T b)
+    {
+        T oldA = a;
+        a = b;
+        b = oldA;
     }
 }
