@@ -381,6 +381,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1398810660800396009, guid: da3b5a9ec695a8049ba289fdcc537b5a,
+        type: 3}
+      propertyPath: yawSpeed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398810660800396009, guid: da3b5a9ec695a8049ba289fdcc537b5a,
+        type: 3}
+      propertyPath: pitchSpeed
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 1485461582158281068, guid: da3b5a9ec695a8049ba289fdcc537b5a,
         type: 3}
       propertyPath: m_RenderPostProcessing
