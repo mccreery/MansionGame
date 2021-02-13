@@ -19,8 +19,14 @@ public class TablePlace : MonoBehaviour, IInteractable
     {
         if (placed != null)
         {
-            hotbar.Add(placed);
-            placed = null;
+            if (hotbar.Add(placed) != -1)
+            {
+                placed = null;
+            }
+            else
+            {
+                FindObjectOfType<Message>().ShowMessage("I'm carrying too much.");
+            }
         }
         else if (Array.IndexOf(puzzle.People, hotbar.SelectedItem) != -1)
         {
