@@ -1,71 +1,71 @@
 # Assets
 
-https://www.sharetextures.com/textures/wall/wallpaper-6/
-https://www.sharetextures.com/textures/wall/wallpaper-13/
-https://3djungle.net/textures/wallpaper/?PAGEN_1=5
-https://www.sharetextures.com/textures/wall/wallpaper-12/
-https://www.youtube.com/watch?v=8lDQaL934VQ
-https://www.freepik.com/free-vector/spider-web-tangling-irregular-cobwebs-realistic-white-images-collection-black_10479174.htm#page=1&query=cobweb&position=2
-https://www.freepik.com/free-vector/detailed-halloween-cobweb-collection_3122340.htm#page=1&query=cobweb&position=7
-https://www.freepik.com/free-vector/realistic-spiderweb-isolated-set_6203150.htm#page=1&query=cobweb&position=11
-https://gametextures.com/shop?order=new&tags=Trim
-https://www.youtube.com/watch?v=zFEtdRrD2D4
-https://www.cgtrader.com/free-3d-models/interior/bathroom/clawfoot-bathtub
-https://www.cgtrader.com/free-3d-models/interior/bathroom/bathroom-faucet-2--2
-https://www.cgtrader.com/free-3d-models/interior/bathroom/toilet-table-693729f7-3db8-4194-936a-16fcd5e36c4b
-https://www.cgtrader.com/free-3d-models/furniture/other/bath-classic-3d
-https://pngtree.com/freepng/spider-spider-web--cobweb_3940714.html
-https://pngtree.com/freepng/spider-spider-web-er-cobweb_3940716.html
-https://cc0textures.com/view?id=Fabric036
-https://cc0textures.com/view?id=Metal035
-https://cc0textures.com/view?id=Wood051
-https://www.cgtrader.com/free-3d-models/interior/other/stairs-41857d74-0fc7-48b4-9fbf-8b62069f6b47
-https://www.cgtrader.com/free-3d-models/interior/house/entrance-door-c749e95b-b48a-471d-a168-e90f68bc2245
-https://www.cgtrader.com/free-3d-print-models/art/sculptures/door-hammer
-https://www.cgtrader.com/free-3d-models/architectural/door/colored-door
-https://cc0textures.com/view?id=WoodFloor016
-https://3dtextures.me/2019/03/27/ceiling-drop-tiles-001/
-https://www.turbosquid.com/3d-models/free-architectural-modules-3d-model/767776
-https://www.cgtrader.com/items/2299924/download-page
-https://www.cgtrader.com/items/930021/download-page
-https://cc0textures.com/view?id=Paper003
-https://www.cgtrader.com/free-3d-models/industrial/tool/ball-peen-hammer-pbr
-https://www.cgtrader.com/free-3d-models/industrial/tool/survival-kit-hammer
-https://blendswap.com/blend/20439
-https://cc0textures.com/view?id=Metal007
-https://fonts.google.com/specimen/Caveat+Brush?category=Handwriting&thickness=5&preview.text_type=custom&sidebar.open=true&selection.family=Caveat+Brush#license
-https://blog.spoongraphics.co.uk/freebies/12-free-high-res-dry-brush-stroke-photoshop-brushes
-https://www.turbosquid.com/3d-models/3d-standing-globe-1421971
-https://www.pexels.com/photo/empty-brown-canvas-235985/
-https://picryl.com/media/physical-map-of-the-world-june-2003
-https://www.cgtrader.com/free-3d-models/furniture/other/animation-book-leather-cover-diary
-https://www.cgtrader.com/items/2204861/download-page
-https://assetstore.unity.com/packages/3d/props/tools/horn-for-free-103209
-https://www.cgtrader.com/free-3d-models/interior/other/fishes-decor-in-stand
-https://www.cgtrader.com/free-3d-models/furniture/table/classic-table-0001
-https://www.cgtrader.com/free-3d-models/furniture/other/wooden-desk-cbb033bb-7de1-40c9-b2cb-8d5b4feabef1
-https://www.cgtrader.com/free-3d-models/interior/other/kitchen-door-handle-1
-https://www.cgtrader.com/free-3d-models/furniture/kitchen/cutlery-spoon-fork-and-knife
-https://www.cgtrader.com/free-3d-models/household/kitchenware/tropical-set-plates
-https://www.cgtrader.com/free-3d-models/household/kitchenware/russian-porcelain-plate
-https://www.cgtrader.com/free-3d-models/scanned/various/bust-of-david-michelangelo
-https://www.cgtrader.com/items/918569/download-page
-https://www.cgtrader.com/free-3d-models/animals/other/elephant-bfa00215-7042-4ce6-8d91-8b6d0f90e1f7
-https://sketchfab.com/3d-models/vault-door-design-a40f95f5199b45bf9a232bee82419049#download
-https://cc0textures.com/view?id=Metal010
-https://www.cgtrader.com/items/2207557/download-page
-https://fonts.google.com/specimen/Noto+Serif?category=Serif&preview.text_type=custom#standard-styles
-https://www.cgtrader.com/free-3d-models/sports/book/old-book-72e4833c-28ec-4237-b76c-4166f6256cdd
-https://www.cgtrader.com/free-3d-models/household/other/single-roman-gold-coin-and-coin-stack
+- https://www.sharetextures.com/textures/wall/wallpaper-6/
+- https://www.sharetextures.com/textures/wall/wallpaper-13/
+- https://3djungle.net/textures/wallpaper/?PAGEN_1=5
+- https://www.sharetextures.com/textures/wall/wallpaper-12/
+- https://www.youtube.com/watch?v=8lDQaL934VQ
+- https://www.freepik.com/free-vector/spider-web-tangling-irregular-cobwebs-realistic-white-images-collection-black_10479174.htm#page=1&query=cobweb&position=2
+- https://www.freepik.com/free-vector/detailed-halloween-cobweb-collection_3122340.htm#page=1&query=cobweb&position=7
+- https://www.freepik.com/free-vector/realistic-spiderweb-isolated-set_6203150.htm#page=1&query=cobweb&position=11
+- https://gametextures.com/shop?order=new&tags=Trim
+- https://www.youtube.com/watch?v=zFEtdRrD2D4
+- https://www.cgtrader.com/free-3d-models/interior/bathroom/clawfoot-bathtub
+- https://www.cgtrader.com/free-3d-models/interior/bathroom/bathroom-faucet-2--2
+- https://www.cgtrader.com/free-3d-models/interior/bathroom/toilet-table-693729f7-3db8-4194-936a-16fcd5e36c4b
+- https://www.cgtrader.com/free-3d-models/furniture/other/bath-classic-3d
+- https://pngtree.com/freepng/spider-spider-web--cobweb_3940714.html
+- https://pngtree.com/freepng/spider-spider-web-er-cobweb_3940716.html
+- https://cc0textures.com/view?id=Fabric036
+- https://cc0textures.com/view?id=Metal035
+- https://cc0textures.com/view?id=Wood051
+- https://www.cgtrader.com/free-3d-models/interior/other/stairs-41857d74-0fc7-48b4-9fbf-8b62069f6b47
+- https://www.cgtrader.com/free-3d-models/interior/house/entrance-door-c749e95b-b48a-471d-a168-e90f68bc2245
+- https://www.cgtrader.com/free-3d-print-models/art/sculptures/door-hammer
+- https://www.cgtrader.com/free-3d-models/architectural/door/colored-door
+- https://cc0textures.com/view?id=WoodFloor016
+- https://3dtextures.me/2019/03/27/ceiling-drop-tiles-001/
+- https://www.turbosquid.com/3d-models/free-architectural-modules-3d-model/767776
+- https://www.cgtrader.com/items/2299924/download-page
+- https://www.cgtrader.com/items/930021/download-page
+- https://cc0textures.com/view?id=Paper003
+- https://www.cgtrader.com/free-3d-models/industrial/tool/ball-peen-hammer-pbr
+- https://www.cgtrader.com/free-3d-models/industrial/tool/survival-kit-hammer
+- https://blendswap.com/blend/20439
+- https://cc0textures.com/view?id=Metal007
+- https://fonts.google.com/specimen/Caveat+Brush?category=Handwriting&thickness=5&preview.text_type=custom&sidebar.open=true&selection.family=Caveat+Brush#license
+- https://blog.spoongraphics.co.uk/freebies/12-free-high-res-dry-brush-stroke-photoshop-brushes
+- https://www.turbosquid.com/3d-models/3d-standing-globe-1421971
+- https://www.pexels.com/photo/empty-brown-canvas-235985/
+- https://picryl.com/media/physical-map-of-the-world-june-2003
+- https://www.cgtrader.com/free-3d-models/furniture/other/animation-book-leather-cover-diary
+- https://www.cgtrader.com/items/2204861/download-page
+- https://assetstore.unity.com/packages/3d/props/tools/horn-for-free-103209
+- https://www.cgtrader.com/free-3d-models/interior/other/fishes-decor-in-stand
+- https://www.cgtrader.com/free-3d-models/furniture/table/classic-table-0001
+- https://www.cgtrader.com/free-3d-models/furniture/other/wooden-desk-cbb033bb-7de1-40c9-b2cb-8d5b4feabef1
+- https://www.cgtrader.com/free-3d-models/interior/other/kitchen-door-handle-1
+- https://www.cgtrader.com/free-3d-models/furniture/kitchen/cutlery-spoon-fork-and-knife
+- https://www.cgtrader.com/free-3d-models/household/kitchenware/tropical-set-plates
+- https://www.cgtrader.com/free-3d-models/household/kitchenware/russian-porcelain-plate
+- https://www.cgtrader.com/free-3d-models/scanned/various/bust-of-david-michelangelo
+- https://www.cgtrader.com/items/918569/download-page
+- https://www.cgtrader.com/free-3d-models/animals/other/elephant-bfa00215-7042-4ce6-8d91-8b6d0f90e1f7
+- https://sketchfab.com/3d-models/vault-door-design-a40f95f5199b45bf9a232bee82419049#download
+- https://cc0textures.com/view?id=Metal010
+- https://www.cgtrader.com/items/2207557/download-page
+- https://fonts.google.com/specimen/Noto+Serif?category=Serif&preview.text_type=custom#standard-styles
+- https://www.cgtrader.com/free-3d-models/sports/book/old-book-72e4833c-28ec-4237-b76c-4166f6256cdd
+- https://www.cgtrader.com/free-3d-models/household/other/single-roman-gold-coin-and-coin-stack
 
 # Sounds
 
-https://freesound.org/people/angelkunev/sounds/519065/
-https://freesound.org/people/BenjaminNelan/sounds/321087/
-https://freesound.org/people/amholma/sounds/344360/
-https://www.dl-sounds.com/royalty-free/elevator-music/
-https://soundimage.org/puzzle-music/
-https://freesound.org/people/chewiesmissus/sounds/244238/
-https://freesound.org/people/Breviceps/sounds/556722/
-https://freesound.org/people/scottyhigh20/sounds/493122/
-https://musopen.org/music/43926-mado-robin-recital/
+- https://freesound.org/people/angelkunev/sounds/519065/
+- https://freesound.org/people/BenjaminNelan/sounds/321087/
+- https://freesound.org/people/amholma/sounds/344360/
+- https://www.dl-sounds.com/royalty-free/elevator-music/
+- https://soundimage.org/puzzle-music/
+- https://freesound.org/people/chewiesmissus/sounds/244238/
+- https://freesound.org/people/Breviceps/sounds/556722/
+- https://freesound.org/people/scottyhigh20/sounds/493122/
+- https://musopen.org/music/43926-mado-robin-recital/
