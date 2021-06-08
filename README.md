@@ -1,4 +1,4 @@
-# Mansion Mystery
+# Grunkle Norbert's Great Lost Fortune
 This is a [Global Game Jam](https://globalgamejam.org/) 2021 entry for the theme
 "Lost and Found" for the [University of Southampton
 site](https://globalgamejam.org/2021/jam-sites/university-southampton).
@@ -6,7 +6,8 @@ site](https://globalgamejam.org/2021/jam-sites/university-southampton).
 Game engine: Unity \
 Models: Blender
 
-# UnityYAMLMerge Setup (on Windows)
+## Development Environment
+### UnityYAMLMerge Setup (on Windows)
 `UnityYAMLMerge.exe` can be found relative to your `Unity.exe` under
 `Data/Tools`. Ensure it is in your `$PATH`, then add the following to your
 `.git/config` file:
